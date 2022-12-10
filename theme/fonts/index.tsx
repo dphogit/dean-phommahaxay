@@ -1,6 +1,9 @@
+import fontFamilies from './font-families';
+import textStyles from './text-styles';
+
 const fonts = {
-  heading: 'Ubuntu, sans-serif',
-  body: 'Inter, sans-serif',
+  fontFamilies,
+  textStyles,
 };
 
 export default fonts;
