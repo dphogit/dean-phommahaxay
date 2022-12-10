@@ -8,6 +8,7 @@ const CVButton = (props: ButtonProps) => {
       variant="outline"
       color="blue.800"
       borderColor="blue.800"
+      fontWeight="normal"
       {...props}
     >
       Download CV

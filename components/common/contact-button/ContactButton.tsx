@@ -1,6 +1,6 @@
-import { ExternalRoutes } from '../../../common/routes';
 import { Button } from '@chakra-ui/react';
 import type { ButtonProps } from '@chakra-ui/react';
+import { ExternalRoutes } from '../../../common/routes';
 
 const ContactButton = (props: ButtonProps) => {
   return (
