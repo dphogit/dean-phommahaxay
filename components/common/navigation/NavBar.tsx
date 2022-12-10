@@ -1,7 +1,8 @@
 import NextLink from 'next/link';
 import { Box, Container, Flex, Link } from '@chakra-ui/react';
 import { Logo } from '../logo';
-import { Pages } from '../../../common/routes';
+import { PageRoutes } from '../../../common/routes';
+import { ContactButton } from '../contact-button';
 
 const NavBar = () => {
   return (
@@ -14,12 +15,12 @@ const NavBar = () => {
         <Box>
           <Logo />
         </Box>
-        <Flex columnGap="32px">
-          <Link as={NextLink} href={Pages.BLOG}>
+        <Flex columnGap="32px" alignItems="center" justifyContent="flex-end">
+          <Link as={NextLink} href={PageRoutes.BLOG}>
             Blog
           </Link>
           <span>Download CV</span>
-          <span>Contact Me</span>
+          <ContactButton />
         </Flex>
       </Container>
     </Box>
