@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import { Heading, Text } from '@chakra-ui/react';
+import { Container, Heading, Text } from '@chakra-ui/react';
 
 export default function Home() {
   return (
-    <div>
+    <Container>
       <Head>
         <title>Home | Dean Phommahaxay</title>
       </Head>
@@ -14,6 +14,6 @@ export default function Home() {
       <Heading variant="h5">Heading Text (H5)</Heading>
       <Heading variant="h6">Heading Text (H6)</Heading>
       <Text>Body Text</Text>
-    </div>
+    </Container>
   );
 }
