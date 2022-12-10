@@ -3,6 +3,7 @@ import { Box, Container, Flex, Link } from '@chakra-ui/react';
 import { Logo } from '../logo';
 import { PageRoutes } from '../../../common/routes';
 import { ContactButton } from '../contact-button';
+import { CVButton } from '../cv-button';
 
 const NavBar = () => {
   return (
@@ -15,11 +16,11 @@ const NavBar = () => {
         <Box>
           <Logo />
         </Box>
-        <Flex columnGap="32px" alignItems="center" justifyContent="flex-end">
-          <Link as={NextLink} href={PageRoutes.BLOG}>
+        <Flex columnGap="16px" alignItems="center" justifyContent="flex-end">
+          <Link as={NextLink} href={PageRoutes.BLOG} mr="12px">
             Blog
           </Link>
-          <span>Download CV</span>
+          <CVButton />
           <ContactButton />
         </Flex>
       </Container>
