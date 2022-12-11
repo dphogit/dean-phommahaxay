@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import { Link } from '@chakra-ui/react';
 import SegnaSrc from '../../../../../public/media/experiences-segna.png';
 import ExperienceTabPanel from './ExperienceTabPanel';
+import { ExternalRoutes } from '../../../../../common/routes';
+import { ExternalLink } from '../../../../common/external-link';
 
 const SegnaTabPanel = () => {
   return (
@@ -19,23 +20,43 @@ const SegnaTabPanel = () => {
         <>
           Collaborate on responsive designs and lead the development of
           Segna&apos;s website iterations across product pivots using{' '}
-          <Link>Next.js</Link>, <Link>TypeScript</Link>, <Link>Sanity CMS</Link>
-          , <Link>Figma</Link> and <Link>Webflow</Link>.
+          <ExternalLink href={ExternalRoutes.NEXT}>Next.js</ExternalLink>,{' '}
+          <ExternalLink href={ExternalRoutes.TYPESCRIPT}>
+            TypeScript
+          </ExternalLink>
+          , <ExternalLink href={ExternalRoutes.SANITY}>Sanity CMS</ExternalLink>
+          , <ExternalLink href={ExternalRoutes.FIGMA}>Figma</ExternalLink> and{' '}
+          <ExternalLink href={ExternalRoutes.WEBFLOW}>Webflow</ExternalLink>.
         </>,
         <>
           Developing and scaling Segna&apos;s interactive website using{' '}
-          <Link>React</Link>, <Link>TypeScript</Link> and{' '}
-          <Link>Material UI</Link>
+          <ExternalLink href={ExternalRoutes.REACT}>React</ExternalLink>,{' '}
+          <ExternalLink href={ExternalRoutes.TYPESCRIPT}>
+            TypeScript
+          </ExternalLink>{' '}
+          and{' '}
+          <ExternalLink href={ExternalRoutes.MATERIAL_UI}>
+            Material UI
+          </ExternalLink>
         </>,
         <>
-          Building and maintaining a reusable <Link>npm</Link> UI component
-          library using <Link>React</Link>, <Link>TypeScript</Link>,{' '}
-          <Link>Rollup</Link> and <Link>Storybook</Link>.
+          Building and maintaining a reusable{' '}
+          <ExternalLink href={ExternalRoutes.NPM}>npm</ExternalLink> UI
+          component library using{' '}
+          <ExternalLink href={ExternalRoutes.REACT}>React</ExternalLink>,{' '}
+          <ExternalLink href={ExternalRoutes.TYPESCRIPT}>
+            TypeScript
+          </ExternalLink>
+          , <ExternalLink href={ExternalRoutes.ROLLUP}>Rollup</ExternalLink> and{' '}
+          <ExternalLink href={ExternalRoutes.STORYBOOK}>Storybook</ExternalLink>
+          .
         </>,
         <>
-          Incorporate and integrate analytics across products to create insights
-          on improving user experience using <Link>Mixpanel</Link>,{' '}
-          <Link>Amplitude</Link> and <Link>Sentry</Link>.
+          Integrate analytics and error monitoring across products to create
+          insights on improving user experience using{' '}
+          <ExternalLink href={ExternalRoutes.MIXPANEL}>Mixpanel</ExternalLink>,{' '}
+          <ExternalLink href={ExternalRoutes.AMPLITUDE}>Amplitude</ExternalLink>{' '}
+          and <ExternalLink href={ExternalRoutes.SENTRY}>Sentry</ExternalLink>.
         </>,
       ]}
       title={'Software Engineering Intern to Part-Timer @ Segna'}
