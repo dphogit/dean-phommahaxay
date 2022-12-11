@@ -1,7 +1,7 @@
-import { ExperienceTabPanel } from './index';
 import Image from 'next/image';
-import AWSSrc from '../../../../../public/media/experiences-aws.png';
 import { Link } from '@chakra-ui/react';
+import { ExperienceTabPanel } from './index';
+import AWSSrc from '../../../../../public/media/experiences-aws.png';
 import { ExternalRoutes } from '../../../../../common/routes';
 
 const AWSTabPanel = () => {

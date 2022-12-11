@@ -8,12 +8,7 @@ const SegnaTabPanel = () => {
   return (
     <ExperienceTabPanel
       media={
-        <Image
-          src={SegnaSrc}
-          alt="React, TypeScript, Material UI, Storybook"
-          height={306}
-          width={360}
-        />
+        <Image src={SegnaSrc} alt="React, TypeScript, Material UI, Storybook" />
       }
       period="Nov 2021 - Dec 2022"
       points={[
