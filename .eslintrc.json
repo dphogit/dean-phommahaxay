@@ -10,7 +10,6 @@
   "rules": {
     "@typescript-eslint/no-explicit-any": "error",
     "react/react-in-jsx-scope": "off",
-    "sort-keys": "error",
-    "sort-imports": "error"
+    "sort-keys": "error"
   }
 }
