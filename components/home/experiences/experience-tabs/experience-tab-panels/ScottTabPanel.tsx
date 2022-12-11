@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { Link } from '@chakra-ui/react';
 import { ExperienceTabPanel } from './index';
 import ScottSrc from '../../../../../public/media/experiences-scott.png';
 import { ExternalRoutes } from '../../../../../common/routes';
+import { ExternalLink } from '../../../../common/external-link';
 
 const ScottTabPanel = () => {
   return (
@@ -14,30 +14,42 @@ const ScottTabPanel = () => {
       title={
         <>
           General Engineering Summer Intern{' '}
-          <Link href={ExternalRoutes.SCOTTPHS}>@ Scott PHS</Link>
+          <ExternalLink href={ExternalRoutes.SCOTTPHS}>
+            @ Scott PHS
+          </ExternalLink>
         </>
       }
       points={[
         <>
           Contributed extensively to the development of a R&D warehouse
           management automation project using{' '}
-          <Link href={ExternalRoutes.NODE}>Node.js</Link>,{' '}
-          <Link href={ExternalRoutes.POSTGRESQL}>Postgres</Link>,{' '}
-          <Link href={ExternalRoutes.EXPRESS}>Express</Link> and the{' '}
-          <Link href={ExternalRoutes.PUG}>Pug HTML templating engine</Link>.
+          <ExternalLink href={ExternalRoutes.NODE}>Node.js</ExternalLink>,{' '}
+          <ExternalLink href={ExternalRoutes.POSTGRESQL}>Postgres</ExternalLink>
+          , <ExternalLink href={ExternalRoutes.EXPRESS}>Express</ExternalLink>{' '}
+          and the{' '}
+          <ExternalLink href={ExternalRoutes.PUG}>
+            Pug HTML templating engine
+          </ExternalLink>
+          .
         </>,
         <>
           Automated assigned project management tasks involving PDF documents
-          using <Link href={ExternalRoutes.PYTHON}>Python</Link>.
+          using <ExternalLink href={ExternalRoutes.PYTHON}>Python</ExternalLink>
+          .
         </>,
         <>
           Standardizing and updating documentation for further reuse in the
           workplace using{' '}
-          <Link href={ExternalRoutes.OFFICE_365}>Microsoft Office Tools</Link>.
+          <ExternalLink href={ExternalRoutes.OFFICE_365}>
+            Microsoft Office Tools
+          </ExternalLink>
+          .
         </>,
         <>
           Configured and documented the use of{' '}
-          <Link href={ExternalRoutes.AUGMENTED_REALITY}>Augmented Reality</Link>{' '}
+          <ExternalLink href={ExternalRoutes.AUGMENTED_REALITY}>
+            Augmented Reality
+          </ExternalLink>{' '}
           headset technology for real-time communication between the company and
           client overseas as a COVID safe alternative of site work.
         </>,

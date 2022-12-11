@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { Link } from '@chakra-ui/react';
 import { ExperienceTabPanel } from './index';
 import AWSSrc from '../../../../../public/media/experiences-aws.png';
 import { ExternalRoutes } from '../../../../../common/routes';
+import { ExternalLink } from '../../../../common/external-link';
 
 const AWSTabPanel = () => {
   return (
@@ -17,7 +17,7 @@ const AWSTabPanel = () => {
       title={
         <>
           Participant of Early Careers Innovation Program{' '}
-          <Link href={ExternalRoutes.AWS}>@ AWS</Link>
+          <ExternalLink href={ExternalRoutes.AWS}>@ AWS</ExternalLink>
         </>
       }
       points={[
@@ -27,14 +27,21 @@ const AWSTabPanel = () => {
         </>,
         <>
           Exposure and working with a range of{' '}
-          <Link href={ExternalRoutes.AWS}>AWS cloud services</Link> in weekly
-          technical labs, including{' '}
-          <Link href={ExternalRoutes.AWS_EC2}>EC2 Linux</Link>,{' '}
-          <Link href={ExternalRoutes.AWS_S3}>S3</Link> storage buckets,
-          <Link href={ExternalRoutes.AWS_REKOGNITION}>Rekognition</Link>{' '}
-          computer vision, <Link href={ExternalRoutes.AWS_LAMBDA}>Lambda</Link>{' '}
+          <ExternalLink href={ExternalRoutes.AWS}>
+            AWS cloud services
+          </ExternalLink>{' '}
+          in weekly technical labs, including{' '}
+          <ExternalLink href={ExternalRoutes.AWS_EC2}>EC2 Linux</ExternalLink>,{' '}
+          <ExternalLink href={ExternalRoutes.AWS_S3}>S3</ExternalLink> storage
+          buckets,
+          <ExternalLink href={ExternalRoutes.AWS_REKOGNITION}>
+            Rekognition
+          </ExternalLink>{' '}
+          computer vision,{' '}
+          <ExternalLink href={ExternalRoutes.AWS_LAMBDA}>Lambda</ExternalLink>{' '}
           serverless functions and{' '}
-          <Link href={ExternalRoutes.AWS_CLOUD9}>Cloud9</Link> IDE.
+          <ExternalLink href={ExternalRoutes.AWS_CLOUD9}>Cloud9</ExternalLink>{' '}
+          IDE.
         </>,
         <>
           Competed in the case competition regarding cloud migration benefits

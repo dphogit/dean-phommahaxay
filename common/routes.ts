@@ -8,7 +8,9 @@ export enum SocialRoutes {
 }
 
 export enum ExternalRoutes {
+  AI_HUB = 'https://hub-ai.netlify.app/',
   AMPLITUDE = 'https://amplitude.com/',
+  A_STAR = 'https://en.wikipedia.org/wiki/A*_search_algorithm',
   AUGMENTED_REALITY = 'https://en.wikipedia.org/wiki/Augmented_reality',
   AWS = 'https://aws.amazon.com/',
   AWS_CLOUD9 = 'https://aws.amazon.com/cloud9/',
@@ -16,8 +18,13 @@ export enum ExternalRoutes {
   AWS_LAMBDA = 'https://aws.amazon.com/lambda/',
   AWS_REKOGNITION = 'https://aws.amazon.com/rekognition/',
   AWS_S3 = 'https://aws.amazon.com/s3/',
+  BFS = 'https://en.wikipedia.org/wiki/Breadth-first_search',
+  CHAKRA_UI = 'https://chakra-ui.com/',
+  DFS = 'https://en.wikipedia.org/wiki/Depth-first_search',
   EXPRESS = 'https://expressjs.com/',
+  EIGHT_PUZZLE = 'https://en.wikipedia.org/wiki/sliding_puzzle',
   FIGMA = 'https://www.figma.com/',
+  JEST = 'https://jestjs.io/',
   MATERIAL_UI = 'https://material-ui.com/',
   MIXPANEL = 'https://mixpanel.com/',
   NEXT = 'https://nextjs.org/',
@@ -36,4 +43,5 @@ export enum ExternalRoutes {
   STORYBOOK = 'https://storybook.js.org/',
   TYPESCRIPT = 'https://www.typescriptlang.org/',
   WEBFLOW = 'https://webflow.com/',
+  VITE = 'https://vitejs.dev/',
 }

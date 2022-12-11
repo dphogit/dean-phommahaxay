@@ -4,6 +4,7 @@ import {
   AWSTabPanel,
   ScottTabPanel,
   SegnaTabPanel,
+  SideProjectTabPanel,
 } from './experience-tab-panels';
 
 const ExperienceTabs = () => {
@@ -16,10 +17,10 @@ const ExperienceTabs = () => {
         <ExperienceTab>Side Project</ExperienceTab>
       </TabList>
       <TabPanels>
-        {/* TODO Extract tab panels and add external links */}
         <SegnaTabPanel />
         <AWSTabPanel />
         <ScottTabPanel />
+        <SideProjectTabPanel />
       </TabPanels>
     </Tabs>
   );
