@@ -1,4 +1,8 @@
 const textStyles = {
+  body: {
+    fontSize: '1rem',
+    lineHeight: '1.675rem',
+  },
   h1: {
     fontSize: '4rem',
   },
@@ -20,10 +24,6 @@ const textStyles = {
   h6: {
     fontSize: '1rem',
     textTransform: 'uppercase',
-  },
-  body: {
-    fontSize: '1rem',
-    lineHeight: '1.675rem',
   },
 };
 
