@@ -1,6 +1,7 @@
 import { Box, Card, Flex, Heading, Text } from '@chakra-ui/react';
 import ExperiencesMemoji from '../../../public/media/experiences-memoji.png';
 import Image from 'next/image';
+import ExpTabs from './ExpTabs';
 
 const SUPPORTING_TEXT = `I've been fortunate enough to gain industry experience while completing my degree through projects completed in internships, part-time work and career programs.`;
 
@@ -32,6 +33,7 @@ const Experiences = () => {
             width={250}
           />
         </Flex>
+        <ExpTabs />
       </Card>
     </Box>
   );
