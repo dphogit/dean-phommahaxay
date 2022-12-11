@@ -10,7 +10,7 @@ const SegnaTabPanel = () => {
       media={
         <Image
           src={SegnaSrc}
-          alt="Tech stack I used at Segna - React, TypeScript, Material UI, Storybook"
+          alt="React, TypeScript, Material UI, Storybook"
           height={306}
           width={360}
         />
@@ -59,7 +59,12 @@ const SegnaTabPanel = () => {
           and <ExternalLink href={ExternalRoutes.SENTRY}>Sentry</ExternalLink>.
         </>,
       ]}
-      title={'Software Engineering Intern to Part-Timer @ Segna'}
+      title={
+        <>
+          Software Engineering Intern to Part-Timer{' '}
+          <ExternalLink href={ExternalRoutes.SEGNA}>@ Segna</ExternalLink>
+        </>
+      }
     />
   );
 };

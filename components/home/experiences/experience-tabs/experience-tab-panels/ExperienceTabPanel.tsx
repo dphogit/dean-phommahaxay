@@ -28,6 +28,22 @@ const StyledListItem = chakra(ListItem, {
   },
 });
 
+const TitleHeading = chakra(Heading, {
+  baseStyle: {
+    '& > a': {
+      color: 'teal.300',
+    },
+    '& > a:hover': {
+      color: 'teal.400',
+      textDecoration: 'none',
+    },
+  },
+  defaultProps: {
+    as: 'h3',
+    variant: 'h3',
+  },
+});
+
 const createKey = (idx: number) => `point-${idx}`;
 
 interface ExperienceTabPanelProps {
@@ -49,9 +65,7 @@ const ExperienceTabPanel = ({
         <Heading as="p" variant="h6" mb="8px" color="gray.300">
           {period}
         </Heading>
-        <Heading as="h3" variant="h3">
-          {title}
-        </Heading>
+        <TitleHeading>{title}</TitleHeading>
         {/* TODO Add custom bullet point icon and styling */}
         <UnorderedList mt="20px" spacing="20px">
           {points.map((point, idx) => (

@@ -1,6 +1,6 @@
 import { TabList, TabPanels, Tabs } from '@chakra-ui/react';
 import ExperienceTab from './ExperienceTab';
-import { SegnaTabPanel } from './experience-tab-panels';
+import { AWSTabPanel, SegnaTabPanel } from './experience-tab-panels';
 
 const ExperienceTabs = () => {
   return (
@@ -14,6 +14,7 @@ const ExperienceTabs = () => {
       <TabPanels>
         {/* TODO Extract tab panels and add external links */}
         <SegnaTabPanel />
+        <AWSTabPanel />
       </TabPanels>
     </Tabs>
   );
