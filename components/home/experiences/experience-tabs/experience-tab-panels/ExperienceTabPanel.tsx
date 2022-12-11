@@ -2,7 +2,6 @@ import {
   Box,
   chakra,
   Heading,
-  Link,
   ListItem,
   TabPanel,
   UnorderedList,
