@@ -1,9 +1,10 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
+import { PassionOutlinedCard } from './passion-outlined-card';
 
 const Passions = () => {
   return (
     <Box as="section" pb="220px">
-      <Box maxWidth="75%" mx="auto">
+      <Box maxWidth="75%" mx="auto" mb="40px">
         <Heading
           as="h5"
           variant="h5"
@@ -17,6 +18,20 @@ const Passions = () => {
           Important passions that help me strive for excellence.
         </Heading>
       </Box>
+      <SimpleGrid columns={3} spacing="20px">
+        <PassionOutlinedCard
+          mainHeading="Love all things football related."
+          smallHeading="Sport"
+        />
+        <PassionOutlinedCard
+          mainHeading="Raised $1241 for Movember."
+          smallHeading="Charity"
+        />
+        <PassionOutlinedCard
+          mainHeading="Writing articles for self reflection."
+          smallHeading="Creative"
+        />
+      </SimpleGrid>
     </Box>
   );
 };
