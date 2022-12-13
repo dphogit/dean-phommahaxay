@@ -22,14 +22,17 @@ const Passions = () => {
         <PassionOutlinedCard
           mainHeading="Love all things football related."
           smallHeading="Sport"
+          href="#"
         />
         <PassionOutlinedCard
           mainHeading="Raised $1241 for Movember."
           smallHeading="Charity"
+          href="#"
         />
         <PassionOutlinedCard
           mainHeading="Writing articles for self reflection."
           smallHeading="Creative"
+          href="#"
         />
       </SimpleGrid>
     </Box>
