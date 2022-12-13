@@ -2,12 +2,13 @@ import { Box, Card, Flex, Heading, Text } from '@chakra-ui/react';
 import ExperiencesMemoji from '../../../public/media/experiences-memoji.png';
 import Image from 'next/image';
 import { ExperienceTabs } from './experience-tabs';
+import { SectionIds } from '../../../common/routes';
 
 const SUPPORTING_TEXT = `I've been fortunate enough to gain industry experience while completing my degree through projects completed in internships, part-time work and career programs.`;
 
 const Experiences = () => {
   return (
-    <Box as="section" pb="220px">
+    <Box as="section" pb="220px" id={SectionIds.EXPERIENCES_AND_PROJECTS}>
       <Card
         variant="filled"
         minHeight="980px"

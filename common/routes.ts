@@ -3,6 +3,12 @@ export enum PageRoutes {
   BLOG = '/blog',
 }
 
+export enum SectionIds {
+  EXPERIENCES_AND_PROJECTS = 'experiences-and-projects',
+  HERO = 'hero',
+  PASSIONS = 'passions',
+}
+
 export enum SocialRoutes {
   EMAIL = 'mailto:deanp21@gmail.com',
 }

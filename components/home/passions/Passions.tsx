@@ -1,10 +1,11 @@
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import { PassionOutlinedCard } from './passion-outlined-card';
 import { CoinIcon, FootballIcon, PenIcon } from './card-icon';
+import { PageRoutes, SectionIds } from '../../../common/routes';
 
 const Passions = () => {
   return (
-    <Box as="section" pb="220px">
+    <Box as="section" pb="220px" id={SectionIds.PASSIONS}>
       <Box maxWidth="75%" mx="auto" mb="40px">
         <Heading
           as="h5"
@@ -20,6 +21,11 @@ const Passions = () => {
         </Heading>
       </Box>
       <SimpleGrid columns={3} spacing="20px">
+        {/* TODO Add links to relevant pages when ready
+              - Football link to blog post
+              - Passion link to Mospace or blog post
+              - Writing link to blog page
+         */}
         <PassionOutlinedCard
           mainHeading="Love all things football related."
           smallHeading="Sport"
@@ -38,7 +44,7 @@ const Passions = () => {
           mainHeading="Writing articles for self reflection."
           smallHeading="Creative"
           supportingText="I write blog posts to share and reflect on my experiences."
-          href="#"
+          href={PageRoutes.BLOG}
           IconComponent={<PenIcon />}
         />
       </SimpleGrid>
