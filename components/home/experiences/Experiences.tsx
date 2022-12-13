@@ -10,7 +10,7 @@ const Experiences = () => {
     <Box as="section" pb="220px">
       <Card
         variant="filled"
-        height="980px"
+        minHeight="980px"
         p="80px"
         borderRadius="32px"
         bg="gray.800"
@@ -18,7 +18,7 @@ const Experiences = () => {
       >
         <Flex>
           <Box pr="40px">
-            <Heading as="h6" variant="h6" mb="12px" color="teal.300">
+            <Heading as="h5" variant="h5" mb="12px" color="teal.300">
               My software engineering journey so far
             </Heading>
             <Heading as="h2" variant="h2" mb="12px">
