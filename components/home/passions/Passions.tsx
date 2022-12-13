@@ -1,5 +1,6 @@
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import { PassionOutlinedCard } from './passion-outlined-card';
+import { CoinIcon, FootballIcon, PenIcon } from './card-icon';
 
 const Passions = () => {
   return (
@@ -22,17 +23,23 @@ const Passions = () => {
         <PassionOutlinedCard
           mainHeading="Love all things football related."
           smallHeading="Sport"
+          supportingText="Been playing since the age of 7. Train twice a week and play on weekends."
           href="#"
+          IconComponent={<FootballIcon />}
         />
         <PassionOutlinedCard
           mainHeading="Raised $1241 for Movember."
           smallHeading="Charity"
           href="#"
+          IconComponent={<CoinIcon />}
+          supportingText="Running and walking 100km across Movember for men’s mental health."
         />
         <PassionOutlinedCard
           mainHeading="Writing articles for self reflection."
           smallHeading="Creative"
+          supportingText="I write blog posts to share and reflect on my experiences."
           href="#"
+          IconComponent={<PenIcon />}
         />
       </SimpleGrid>
     </Box>

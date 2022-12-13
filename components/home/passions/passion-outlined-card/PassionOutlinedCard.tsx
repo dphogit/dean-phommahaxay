@@ -1,42 +1,82 @@
-import { Box, Card, CardBody, Heading, Link } from '@chakra-ui/react';
-import { FootballIcon } from '../card-icon';
+import React, { useState } from 'react';
+import { Box, Card, CardBody, Heading, Link, Text } from '@chakra-ui/react';
 
 interface PassionOutlinedCardProps {
   mainHeading: string;
   smallHeading: string;
+  supportingText: string;
   href: string;
+  IconComponent: React.ReactNode;
 }
+
+const transition = 'all 0.15s ease-out';
 
 const PassionOutlinedCard = ({
   smallHeading,
   mainHeading,
   href,
+  supportingText,
+  IconComponent,
 }: PassionOutlinedCardProps) => {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
   return (
     <Link href={href} _hover={{ textDecoration: 'none' }}>
       <Card
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         variant="outline"
         height="320px"
         borderRadius="32px"
         borderColor="gray.300"
-        transition="all 0.2s ease-out"
-        _hover={{ boxShadow: 'xl', transform: 'translateY(-8px)' }}
+        transition={transition}
+        _hover={{
+          '& svg': {
+            fill: 'teal.500',
+            height: '65px',
+            width: '65px',
+          },
+          boxShadow: 'xl',
+          transform: 'translateY(-8px)',
+        }}
       >
         <CardBody
           display="flex"
           flexDirection="column"
           justifyContent="space-between"
         >
-          <Box h="100px" w="100px" position="relative">
-            <FootballIcon />
-          </Box>
-          <Box width="80%">
-            <Heading as="h6" variant="h6" mb="12px" color="gray.500">
-              {smallHeading}
-            </Heading>
-            <Heading as="h4" variant="h4">
-              {mainHeading}
-            </Heading>
+          <Box>{IconComponent}</Box>
+          <Box overflow="hidden">
+            <Box
+              transform={`translateY(${isHovered ? 0 : 60}px)`}
+              transition={transition}
+              mb="8px"
+              width="80%"
+            >
+              <Heading
+                as="h6"
+                variant="h6"
+                mb="12px"
+                color={isHovered ? 'teal.500' : 'gray.500'}
+              >
+                {smallHeading}
+              </Heading>
+              <Heading as="h4" variant="h4">
+                {mainHeading}
+              </Heading>
+            </Box>
+            <Text
+              opacity={isHovered ? 1 : 0}
+              transform={`translateY(${isHovered ? 0 : 80}px)`}
+              transition={transition}
+              color="gray.500"
+              minH="50px"
+            >
+              {supportingText}
+            </Text>
           </Box>
         </CardBody>
       </Card>

@@ -11,7 +11,7 @@ const CardIcon = ({ children, ...props }: CardIconProps) => {
     <Icon
       h="100px"
       w="100px"
-      transition="all 0.25s ease-out"
+      transition="all 0.15s ease-out"
       fill="gray.500"
       {...props}
     >
