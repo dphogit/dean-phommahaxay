@@ -4,6 +4,7 @@ export enum PageRoutes {
 }
 
 export enum SectionIds {
+  CALL_TO_ACTION = 'call-to-action',
   EXPERIENCES_AND_PROJECTS = 'experiences-and-projects',
   HERO = 'hero',
   PASSIONS = 'passions',
@@ -30,6 +31,7 @@ export enum ExternalRoutes {
   EXPRESS = 'https://expressjs.com/',
   EIGHT_PUZZLE = 'https://en.wikipedia.org/wiki/sliding_puzzle',
   FIGMA = 'https://www.figma.com/',
+  GITHUB_REPOSITORY = 'https://github.com/dphogit/dean-phommahaxay',
   JEST = 'https://jestjs.io/',
   MATERIAL_UI = 'https://material-ui.com/',
   MIXPANEL = 'https://mixpanel.com/',

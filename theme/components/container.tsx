@@ -6,8 +6,8 @@ export default defineStyleConfig({
   },
   variants: {
     page: {
-      maxWidth: '1140px',
       margin: '0 auto',
+      maxWidth: '1140px',
     },
   },
 });

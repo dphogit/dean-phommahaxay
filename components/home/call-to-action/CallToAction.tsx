@@ -1,9 +1,10 @@
 import { Box, Card, Flex, Heading, Text } from '@chakra-ui/react';
 import { ContactButton, CVButton } from '../../common';
+import { SectionIds } from '../../../common/routes';
 
 const CallToAction = () => {
   return (
-    <Box mb="220px" as="section">
+    <Box mb="220px" as="section" id={SectionIds.CALL_TO_ACTION}>
       <Card
         variant="filled"
         bgGradient="linear(to-r, gray.800, gray.700)"
