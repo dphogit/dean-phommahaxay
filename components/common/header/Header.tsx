@@ -23,7 +23,13 @@ const Header = () => {
         alignItems="center"
       >
         <Box>
-          <Logo />
+          <Link
+            as={NextLink}
+            href={PageRoutes.HOME}
+            _hover={{ textDecoration: 'none' }}
+          >
+            <Logo />
+          </Link>
         </Box>
         <Flex columnGap="16px" alignItems="center" justifyContent="flex-end">
           <Link as={NextLink} href={PageRoutes.BLOG} mr="12px" color="blue.800">
