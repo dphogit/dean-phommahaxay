@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { ExperienceTabPanel } from './index';
 import AWSSrc from '../../../../../public/media/experiences-aws.png';
 import { ExternalRoutes } from '../../../../../common/routes';
-import { ExternalLink } from '../../../../common/external-link';
+import { ExternalLink } from '../../../../common';
 
 const AWSTabPanel = () => {
   return (

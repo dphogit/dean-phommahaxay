@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { ExperienceTabPanel } from './index';
 import SideProjectSrc from '../../../../../public/media/experiences-side-project.png';
 import { ExternalRoutes } from '../../../../../common/routes';
-import { ExternalLink } from '../../../../common/external-link';
+import { ExternalLink } from '../../../../common';
 
 const SideProjectTabPanel = () => {
   return (

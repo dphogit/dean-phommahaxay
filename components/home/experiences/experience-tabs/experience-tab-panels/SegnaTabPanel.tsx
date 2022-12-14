@@ -2,7 +2,7 @@ import Image from 'next/image';
 import SegnaSrc from '../../../../../public/media/experiences-segna.png';
 import ExperienceTabPanel from './ExperienceTabPanel';
 import { ExternalRoutes } from '../../../../../common/routes';
-import { ExternalLink } from '../../../../common/external-link';
+import { ExternalLink } from '../../../../common';
 
 const SegnaTabPanel = () => {
   return (
