@@ -8,7 +8,7 @@ const INTRO_TEXT = `I'm a final year Software Engineering student at the Univers
 
 const Hero = () => {
   return (
-    <PageGrid pt="120px" pb="220px" as="section" id={SectionIds.HERO}>
+    <PageGrid mt="120px" mb="220px" as="section" id={SectionIds.HERO}>
       <GridItem colSpan={7}>
         <Heading as="h1" variant="h1" textTransform="uppercase">
           Dean <br /> Phommahaxay

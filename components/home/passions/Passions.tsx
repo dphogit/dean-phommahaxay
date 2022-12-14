@@ -5,7 +5,7 @@ import { PageRoutes, SectionIds } from '../../../common/routes';
 
 const Passions = () => {
   return (
-    <Box as="section" pb="220px" id={SectionIds.PASSIONS}>
+    <Box as="section" mb="220px" id={SectionIds.PASSIONS}>
       <Box maxWidth="75%" mx="auto" mb="40px">
         <Heading
           as="h5"

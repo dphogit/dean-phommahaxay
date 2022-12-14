@@ -1,6 +1,6 @@
 import { Container } from '@chakra-ui/react';
 import Head from 'next/head';
-import { Experiences, Hero, Passions } from '../components/home';
+import { CallToAction, Experiences, Hero, Passions } from '../components/home';
 import { NavBar } from '../components/common';
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
         <Hero />
         <Experiences />
         <Passions />
+        <CallToAction />
       </Container>
     </>
   );

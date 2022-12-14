@@ -8,7 +8,7 @@ const SUPPORTING_TEXT = `I've been fortunate enough to gain industry experience 
 
 const Experiences = () => {
   return (
-    <Box as="section" pb="220px" id={SectionIds.EXPERIENCES_AND_PROJECTS}>
+    <Box as="section" mb="220px" id={SectionIds.EXPERIENCES_AND_PROJECTS}>
       <Card
         variant="filled"
         minHeight="980px"
