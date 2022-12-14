@@ -31,7 +31,7 @@ const CallToAction = () => {
             color="gray.200"
             borderColor="gray.200"
             fontWeight="bold"
-            _hover={{ bg: 'gray.600', opacity: 0.9 }}
+            _hover={{ bg: 'gray.700', opacity: 0.9 }}
           />
         </Flex>
       </Card>

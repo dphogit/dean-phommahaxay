@@ -5,7 +5,7 @@ import { Logo } from '../logo';
 import NextLink from 'next/link';
 import { PageRoutes } from '../../../common/routes';
 
-const NavBar = () => {
+const Header = () => {
   return (
     <Box
       as="nav"
@@ -37,4 +37,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Header;

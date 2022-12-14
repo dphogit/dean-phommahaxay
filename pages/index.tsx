@@ -1,7 +1,7 @@
 import { Container } from '@chakra-ui/react';
 import Head from 'next/head';
 import { CallToAction, Experiences, Hero, Passions } from '../components/home';
-import { Footer, NavBar } from '../components/common';
+import { Header, Footer } from '../components/common';
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>Home | Dean Phommahaxay</title>
       </Head>
-      <NavBar />
+      <Header />
       <Container>
         <Hero />
         <Experiences />
