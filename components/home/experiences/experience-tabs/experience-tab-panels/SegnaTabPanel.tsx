@@ -24,7 +24,7 @@ const SegnaTabPanel = () => {
           <ExternalLink href={ExternalRoutes.WEBFLOW}>Webflow</ExternalLink>.
         </>,
         <>
-          Developing and scaling Segna&apos;s interactive website using{' '}
+          Developing and scaling Segna&apos;s platform using{' '}
           <ExternalLink href={ExternalRoutes.REACT}>React</ExternalLink>,{' '}
           <ExternalLink href={ExternalRoutes.TYPESCRIPT}>
             TypeScript
@@ -33,6 +33,7 @@ const SegnaTabPanel = () => {
           <ExternalLink href={ExternalRoutes.MATERIAL_UI}>
             Material UI
           </ExternalLink>
+          . This includes building reusable components and code reviews.
         </>,
         <>
           Building and maintaining a reusable{' '}

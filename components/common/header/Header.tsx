@@ -1,8 +1,8 @@
 import { Box, Container, Flex, Link } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import { CVButton } from '../cv-button';
 import { ContactButton } from '../contact-button';
 import { Logo } from '../logo';
-import NextLink from 'next/link';
 import { PageRoutes } from '../../../common/routes';
 
 const Header = () => {

@@ -41,7 +41,7 @@ const SideProjectTabPanel = () => {
         </>,
         <>
           Assuring quality of generic search algorithm implementations through
-          unit testing using the
+          unit testing using the{' '}
           <ExternalLink href={ExternalRoutes.JEST}>
             Jest Javascript testing framework
           </ExternalLink>

@@ -1,16 +1,15 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { PageRoutes } from '../../common/routes';
+import { Container, Heading } from '@chakra-ui/react';
+import { PageLayout } from '../../components/common';
 
 const Blog = () => {
   return (
-    <>
-      <Head>
-        <title>Blog | Dean Phommahaxay</title>
-      </Head>
-      <div>This is the blog page. Coming Soon!</div>
-      <Link href={PageRoutes.HOME}>Back Home</Link>
-    </>
+    <PageLayout pageName="Blog">
+      <Container centerContent py="200px">
+        <Heading as="h1" variant="h1" mb="20px">
+          Blog Page Coming Soon!
+        </Heading>
+      </Container>
+    </PageLayout>
   );
 };
 
