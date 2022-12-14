@@ -11,7 +11,10 @@ export enum SectionIds {
 }
 
 export enum SocialRoutes {
+  GITHUB = 'https://github.com/dphogit/',
   EMAIL = 'mailto:deanp21@gmail.com',
+  LINKEDIN = 'https://www.linkedin.com/in/dean-phommahaxay/',
+  TWITTER = 'https://twitter.com/_dean21',
 }
 
 export enum ExternalRoutes {

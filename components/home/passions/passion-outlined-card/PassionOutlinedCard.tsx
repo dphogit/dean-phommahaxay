@@ -40,7 +40,7 @@ const PassionOutlinedCard = ({
             width: '65px',
           },
           boxShadow: 'xl',
-          transform: 'translateY(-8px)',
+          transform: 'scale(1.01)',
         }}
       >
         <CardBody

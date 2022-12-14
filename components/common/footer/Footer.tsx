@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Icon } from '@chakra-ui/react';
+import { Box, chakra, Container, Icon, Stack } from '@chakra-ui/react';
 import { ExternalLink } from '../external-link';
 import {
   EnvelopeClosedIcon,
@@ -7,7 +7,19 @@ import {
   LinkedInLogoIcon,
   TwitterLogoIcon,
 } from '@radix-ui/react-icons';
-import { ExternalRoutes } from '../../../common/routes';
+import { ExternalRoutes, SocialRoutes } from '../../../common/routes';
+
+const transition = 'all 0.15s ease-out';
+
+const SocialIcon = chakra(Icon, {
+  baseStyle: {
+    _hover: { opacity: 1 },
+    height: '24px',
+    opacity: 0.5,
+    transition,
+    width: '24px',
+  },
+});
 
 const Footer = () => {
   return (
@@ -23,6 +35,9 @@ const Footer = () => {
             display="flex"
             alignItems="center"
             lineHeight="28px"
+            opacity={0.5}
+            transition={transition}
+            _hover={{ opacity: 1 }}
           >
             <span>Designed & Built by Dean Phommahaxay</span>
             <Icon
@@ -31,12 +46,20 @@ const Footer = () => {
             />
           </ExternalLink>
         </Box>
-        <Flex alignItems="center">
-          <GitHubLogoIcon />
-          <LinkedInLogoIcon />
-          <TwitterLogoIcon />
-          <EnvelopeClosedIcon />
-        </Flex>
+        <Stack direction="row" alignItems="center" spacing="16px">
+          <ExternalLink href={SocialRoutes.GITHUB}>
+            <SocialIcon as={GitHubLogoIcon} />
+          </ExternalLink>
+          <ExternalLink href={SocialRoutes.LINKEDIN}>
+            <SocialIcon as={LinkedInLogoIcon} />
+          </ExternalLink>
+          <ExternalLink href={SocialRoutes.TWITTER}>
+            <SocialIcon as={TwitterLogoIcon} />
+          </ExternalLink>
+          <ExternalLink href={SocialRoutes.EMAIL}>
+            <SocialIcon as={EnvelopeClosedIcon} />
+          </ExternalLink>
+        </Stack>
       </Container>
     </Box>
   );

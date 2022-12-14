@@ -28,8 +28,9 @@ const CallToAction = () => {
           <ContactButton size="lg" bg="teal.500" />
           <CVButton
             size="lg"
-            color="white"
-            borderColor="white"
+            color="gray.200"
+            borderColor="gray.200"
+            fontWeight="bold"
             _hover={{ bg: 'gray.600', opacity: 0.9 }}
           />
         </Flex>
