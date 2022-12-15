@@ -9,7 +9,7 @@ import {
 
 const ExperienceTabs = () => {
   return (
-    <Tabs variant="soft-rounded">
+    <Tabs variant="soft-rounded" mt="20px">
       <TabList bg="gray.700" display="inline-flex" borderRadius="32px">
         <ExperienceTab>Segna</ExperienceTab>
         <ExperienceTab>AWS ECIP</ExperienceTab>

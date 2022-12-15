@@ -13,7 +13,7 @@ const AWSTabPanel = () => {
           alt={'EC2 Linux, S3, Rekognition, Lambda and Cloud9'}
         />
       }
-      period="Nov 2021 - Dec 2022"
+      period="Aug 2021 - Oct 2021"
       title={
         <>
           Participant of Early Careers Innovation Program{' '}

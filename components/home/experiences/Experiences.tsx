@@ -25,7 +25,7 @@ const Experiences = () => {
             <Heading as="h2" variant="h2" mb="12px">
               Industry experiences have been my best teacher.
             </Heading>
-            <Text>{SUPPORTING_TEXT}</Text>
+            <Text color="gray.300">{SUPPORTING_TEXT}</Text>
           </Box>
           <Image
             src={ExperiencesMemoji}
