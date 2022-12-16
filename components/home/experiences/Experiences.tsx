@@ -8,7 +8,12 @@ const SUPPORTING_TEXT = `I've been fortunate enough to gain industry experience 
 
 const Experiences = () => {
   return (
-    <Box as="section" mb="220px" id={SectionIds.EXPERIENCES_AND_PROJECTS}>
+    <Box
+      as="section"
+      mb="220px"
+      id={SectionIds.EXPERIENCES_AND_PROJECTS}
+      display={['none', 'block']} // TODO Come back to this section and make responsive
+    >
       <Card
         variant="filled"
         minHeight="980px"

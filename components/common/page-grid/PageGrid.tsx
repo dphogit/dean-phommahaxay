@@ -3,7 +3,11 @@ import type { GridProps } from '@chakra-ui/react';
 
 const PageGrid = ({ children, ...props }: GridProps) => {
   return (
-    <Grid templateColumns="repeat(12, 1fr)" columnGap="20px" {...props}>
+    <Grid
+      gridTemplateColumns={['repeat(4, 1fr)', 'repeat(12, 1fr)']}
+      columnGap="20px"
+      {...props}
+    >
       {children}
     </Grid>
   );
