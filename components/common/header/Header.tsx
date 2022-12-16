@@ -1,13 +1,5 @@
-import {
-  Box,
-  Container,
-  Flex,
-  IconButton,
-  Link,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Box, Container, Flex, IconButton, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
 import { CVButton } from '../cv-button';
 import { ContactButton } from '../contact-button';
 import { Logo } from '../logo';
@@ -16,36 +8,26 @@ import { Cross2Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { useSSRMediaQuery } from '../../../hooks';
 import { breakpoints } from '../../../theme';
 import { MobileMenu } from './mobile-menu';
-import type { MobileMenuItemProps } from './mobile-menu';
+import useMobileMenu from './hooks/useMobileMenu';
 
 const MENU_ICON_LENGTH = 20;
+
+const MOBILE_MENU_ITEMS = [
+  {
+    text: 'Home',
+    href: PageRoutes.HOME,
+  },
+  {
+    text: 'Blog',
+    href: PageRoutes.BLOG,
+  },
+];
 
 const Header = () => {
   const query = `(min-width: ${breakpoints.sm})`;
   const [isLargerThanSM] = useSSRMediaQuery(query);
 
-  const { isOpen, onToggle, onClose } = useDisclosure();
-
-  const { asPath } = useRouter();
-
-  const handleMenuItemClick = (href: string) => () => {
-    if (asPath === href) {
-      onClose();
-    }
-  };
-
-  const MENU_ITEMS: MobileMenuItemProps[] = [
-    {
-      href: PageRoutes.HOME,
-      text: 'Home',
-      onClick: handleMenuItemClick(PageRoutes.HOME),
-    },
-    {
-      href: PageRoutes.BLOG,
-      text: 'Blog',
-      onClick: handleMenuItemClick(PageRoutes.BLOG),
-    },
-  ];
+  const { isOpen, onToggle, menuItems } = useMobileMenu(MOBILE_MENU_ITEMS);
 
   return (
     <Box
@@ -109,7 +91,7 @@ const Header = () => {
             )}
           </Flex>
         </Container>
-        {isOpen && <MobileMenu menuItems={MENU_ITEMS} />}
+        {isOpen && <MobileMenu menuItems={menuItems} />}
       </Flex>
     </Box>
   );
