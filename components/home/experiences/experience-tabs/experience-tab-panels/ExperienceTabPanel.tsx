@@ -79,8 +79,11 @@ const moveIn = keyframes`
 
 const createKey = (idx: number) => `point-${idx}`;
 
+const INIT_DELAY = 250;
+const STAGGER = 150;
+
 const getListItemAnimation = (idx: number) => {
-  return `${moveIn} 500ms ease-out ${500 + idx * 150}ms both`;
+  return `${moveIn} 500ms ease-out ${INIT_DELAY + idx * STAGGER}ms both`;
 };
 
 interface ExperienceTabPanelProps {
@@ -119,7 +122,7 @@ const ExperienceTabPanel = ({
         pl="72px"
         pb="16px"
         alignSelf="center"
-        animation={`${fadeIn} 500ms ease-out 1500ms both`}
+        animation={`${fadeIn} 500ms ease-out 1000ms both`}
       >
         {media}
       </Box>
