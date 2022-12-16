@@ -8,11 +8,12 @@ import { Cross2Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { useSSRMediaQuery } from '../../../hooks';
 import { breakpoints } from '../../../theme';
 import { MobileMenu } from './mobile-menu';
-import useMobileMenu from './hooks/useMobileMenu';
+import { useMobileMenu } from './hooks';
+import type { UseMobileMenuItem } from './hooks';
 
 const MENU_ICON_LENGTH = 20;
 
-const MOBILE_MENU_ITEMS = [
+const MOBILE_MENU_ITEMS: UseMobileMenuItem[] = [
   {
     text: 'Home',
     href: PageRoutes.HOME,

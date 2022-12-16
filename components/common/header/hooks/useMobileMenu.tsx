@@ -2,13 +2,13 @@ import { useRouter } from 'next/router';
 import { useDisclosure } from '@chakra-ui/react';
 import { MobileMenuItemProps } from '../mobile-menu';
 
-type UseMobileMenuItems = Omit<MobileMenuItemProps, 'onClick'>[];
+export type UseMobileMenuItem = Omit<MobileMenuItemProps, 'onClick'>;
 
 /**
  * Hook to handle setting up the mobile menu items with appropriate
  * onClick handlers to be used in the Header component.
  */
-const useMobileMenu = (items: UseMobileMenuItems) => {
+const useMobileMenu = (items: UseMobileMenuItem[]) => {
   const { onClose, ...useDisclosureValues } = useDisclosure();
 
   const { asPath } = useRouter();
