@@ -34,7 +34,7 @@ const CallToAction = () => {
         <Heading as="h2" variant={['h2xs', null, 'h2']} mb="8px">
           Get to know me more.
         </Heading>
-        <Text>Flick me an email, or have a read of my CV.</Text>
+        <Text>Flick me an email, or read my resume.</Text>
         <Flex mt="20px" gap="24px" flexDirection={['column', 'row']}>
           <ContactButton size="lg" bg="teal.500" />
           <ResumeButton
