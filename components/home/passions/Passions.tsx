@@ -10,7 +10,12 @@ import {
 
 const Passions = () => {
   return (
-    <Box as="section" mb="220px" px={['24px', 0]} id={SectionIds.PASSIONS}>
+    <Box
+      as="section"
+      mb={['80px', '220px']}
+      px={['24px', 0]}
+      id={SectionIds.PASSIONS}
+    >
       <Box maxWidth={['100%', '75%']} mx="auto" mb="40px">
         <Heading
           as="h5"

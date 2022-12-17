@@ -13,12 +13,16 @@ const Experiences = () => {
   const [isLargerThanSM] = useSSRMediaQuery(query);
 
   return (
-    <Box as="section" mb="220px" id={SectionIds.EXPERIENCES_AND_PROJECTS}>
+    <Box
+      as="section"
+      mb={['60px', '220px']}
+      id={SectionIds.EXPERIENCES_AND_PROJECTS}
+    >
       <Card
         variant="filled"
         minHeight={['auto', '980px']}
         px={['24px', '80px']}
-        py={['48px', '80px']}
+        py={['60px', '80px']}
         borderRadius={[0, '32px']}
         bg="gray.800"
         color="white"

@@ -4,7 +4,7 @@ import { SectionIds } from '../../../common/routes';
 
 const CallToAction = () => {
   return (
-    <Box mb="220px" as="section" id={SectionIds.CALL_TO_ACTION}>
+    <Box mb={['80px', '220px']} as="section" id={SectionIds.CALL_TO_ACTION}>
       <Card
         variant="filled"
         bgGradient="linear(to-r, gray.800, gray.700)"

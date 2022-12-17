@@ -16,7 +16,7 @@ const Hero = () => {
     <PageGrid
       mt={['80px', '200px']}
       px={['24px', '16px']}
-      mb="220px"
+      mb={['60px', '220px']}
       as="section"
       id={SectionIds.HERO}
       display={['flex', 'grid']}
