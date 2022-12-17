@@ -23,7 +23,7 @@ const animation = `${fadeSlideIn} 600ms ease-out`;
 export default function Home() {
   return (
     <PageLayout pageName="Home">
-      <Container px={[0, '16px']}>
+      <Container px={[0, '16px']} animation={[null, null, animation]}>
         <Hero />
         <Experiences />
         <Passions />

@@ -40,9 +40,12 @@ const Hero = () => {
         <Image
           src={HeroMemoji}
           alt="Dean Phommahaxay Memoji avatar sitting at brown desktop with silver Macbook laptop."
-          height={isLargerThanSM ? 450 : 360}
-          width={isLargerThanSM ? 360 : 288}
-          style={{ margin: '0 auto' }}
+          style={{
+            margin: '0 auto',
+            width: isLargerThanSM ? 360 : 288,
+            height: 'auto',
+          }}
+          priority
         />
       </GridItem>
     </PageGrid>
