@@ -9,12 +9,12 @@ import {
 
 const ExperienceTabs = () => {
   return (
-    <Tabs variant="soft-rounded" mt="20px">
+    <Tabs variant="soft-rounded" mt={['32px', '20px']}>
       <TabList
         bg="gray.700"
-        display="inline-flex"
+        display={['flex', 'inline-flex']}
         flexDirection={['column', 'row']}
-        borderRadius="32px"
+        borderRadius={['24px', '32px']}
       >
         <ExperienceTab>Segna</ExperienceTab>
         <ExperienceTab>AWS ECIP</ExperienceTab>

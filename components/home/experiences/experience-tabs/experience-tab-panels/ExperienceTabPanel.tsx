@@ -12,6 +12,7 @@ import { ReactNode } from 'react';
 const StyledTabPanel = chakra(TabPanel, {
   baseStyle: {
     display: 'flex',
+    flexDirection: ['column', 'row'],
     justifyContent: 'space-between',
     mt: '36px',
     p: 0,
@@ -101,7 +102,7 @@ const ExperienceTabPanel = ({
 }: ExperienceTabPanelProps) => {
   return (
     <StyledTabPanel>
-      <Box flex={2}>
+      <Box flex={2} overflow="hidden">
         <Heading as="p" variant="h6" mb="8px" color="gray.300">
           {period}
         </Heading>
@@ -119,8 +120,9 @@ const ExperienceTabPanel = ({
       </Box>
       <Box
         flex={1}
-        pl="72px"
+        pl={[0, '72px']}
         pb="16px"
+        pt={['64px', 0]}
         alignSelf="center"
         animation={`${fadeIn} 500ms ease-out 1000ms both`}
       >

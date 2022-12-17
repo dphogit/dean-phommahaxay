@@ -6,7 +6,7 @@ import { SectionIds } from '../../../common/routes';
 import { useSSRMediaQuery } from '../../../hooks';
 import { breakpoints } from '../../../theme';
 
-const SUPPORTING_TEXT = `I've been fortunate enough to gain industry experience while completing my degree through projects completed in internships, part-time work and career programs.`;
+const SUPPORTING_TEXT = `While completing my degree through projects, I've completed internships, part-time work and career programs.`;
 
 const Experiences = () => {
   const query = `(min-width: ${breakpoints.sm})`;
@@ -16,7 +16,7 @@ const Experiences = () => {
     <Box as="section" mb="220px" id={SectionIds.EXPERIENCES_AND_PROJECTS}>
       <Card
         variant="filled"
-        minHeight="980px"
+        minHeight={['auto', '980px']}
         px={['24px', '80px']}
         py={['48px', '80px']}
         borderRadius={[0, '32px']}
@@ -24,11 +24,20 @@ const Experiences = () => {
         color="white"
       >
         <Flex>
-          <Box pr="40px">
-            <Heading as="h5" variant="h5" mb="12px" color="teal.300">
-              My software engineering journey so far
+          <Box pr={[0, '120px']}>
+            <Heading
+              as="h5"
+              variant={['h5xs', null, 'h5']}
+              color="teal.300"
+              mb="12px"
+            >
+              Software Engineering
             </Heading>
-            <Heading as="h2" variant={['h2xs', null, 'h2']} mb="12px">
+            <Heading
+              as="h2"
+              variant={['h2xs', null, 'h2']}
+              mb={['20px', '12px']}
+            >
               Industry experiences have been my best teacher.
             </Heading>
             <Text color="gray.300">{SUPPORTING_TEXT}</Text>

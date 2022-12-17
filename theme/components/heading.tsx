@@ -29,6 +29,7 @@ export default defineStyleConfig({
 
     h5xs: {
       fontSize: '1.125rem',
+      lineHeight: 1.5,
       textTransform: 'uppercase',
     },
     h5: {
