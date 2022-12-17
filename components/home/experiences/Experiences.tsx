@@ -9,8 +9,8 @@ import { breakpoints } from '../../../theme';
 const SUPPORTING_TEXT = `While completing my degree through projects, I've completed internships, part-time work and career programs.`;
 
 const Experiences = () => {
-  const query = `(min-width: ${breakpoints.sm})`;
-  const [isLargerThanSM] = useSSRMediaQuery(query);
+  const query = `(min-width: ${breakpoints.md})`;
+  const [isLargerThanMd] = useSSRMediaQuery(query);
 
   return (
     <Box
@@ -21,14 +21,14 @@ const Experiences = () => {
       <Card
         variant="filled"
         minHeight={['auto', '980px']}
-        px={['24px', '80px']}
-        py={['60px', '80px']}
-        borderRadius={[0, '32px']}
+        px={['24px', null, null, '80px']}
+        py={['60px', null, null, '80px']}
+        borderRadius={[0, null, null, '32px']}
         bg="gray.800"
         color="white"
       >
-        <Flex>
-          <Box pr={[0, '120px']}>
+        <Flex alignItems={[null, null, 'center', 'flex-start']}>
+          <Box pr={[0, null, '20px', '120px']}>
             <Heading
               as="h5"
               variant={['h5xs', null, 'h5']}
@@ -46,7 +46,7 @@ const Experiences = () => {
             </Heading>
             <Text color="gray.300">{SUPPORTING_TEXT}</Text>
           </Box>
-          {isLargerThanSM && (
+          {isLargerThanMd && (
             <Image
               src={ExperiencesMemoji}
               alt="Dean Phommahaxay Memoji avatar fist bumping towards reader."

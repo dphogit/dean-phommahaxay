@@ -18,6 +18,9 @@ export default defineStyleConfig({
       lineHeight: '4rem',
     },
 
+    h3xs: {
+      fontSize: '1.75rem',
+    },
     h3: {
       fontSize: '2.25rem',
     },
