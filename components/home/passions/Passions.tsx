@@ -12,11 +12,11 @@ const Passions = () => {
   return (
     <Box
       as="section"
-      mb={['80px', '220px']}
-      px={['24px', 0]}
+      mb={['80px', null, '120px', '220px']}
+      px={['24px', null, null, 0]}
       id={SectionIds.PASSIONS}
     >
-      <Box maxWidth={['100%', '75%']} mx="auto" mb="40px">
+      <Box maxWidth={['100%', null, '90%', '75%']} mx="auto" mb="40px">
         <Heading
           as="h5"
           variant={['h5xs', null, 'h5']}
@@ -30,7 +30,12 @@ const Passions = () => {
           Important passions that help me strive for excellence.
         </Heading>
       </Box>
-      <SimpleGrid columns={[1, 3]} spacing="20px">
+      <SimpleGrid
+        columns={[1, null, null, 3]}
+        width={['100%', null, '400px', 'auto']}
+        mx="auto"
+        spacing="20px"
+      >
         <PassionOutlinedCard
           mainHeading="Love all things football related."
           smallHeading="Sport"

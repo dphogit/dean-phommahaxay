@@ -57,7 +57,12 @@ const PassionOutlinedCard = ({
           <Box>{IconComponent}</Box>
           <Box overflow="hidden">
             <Box
-              transform={['none', `translateY(${isHovered ? 0 : 60}px)`]}
+              transform={[
+                'none',
+                null,
+                null,
+                `translateY(${isHovered ? 0 : 60}px)`,
+              ]}
               transition={transition}
               mb="8px"
               width="80%"
@@ -66,7 +71,12 @@ const PassionOutlinedCard = ({
                 as="h6"
                 variant="h6"
                 mb="12px"
-                color={['teal.500', isHovered ? 'teal.500' : 'gray.500']}
+                color={[
+                  'teal.500',
+                  null,
+                  null,
+                  isHovered ? 'teal.500' : 'gray.500',
+                ]}
               >
                 {smallHeading}
               </Heading>
@@ -75,8 +85,13 @@ const PassionOutlinedCard = ({
               </Heading>
             </Box>
             <Text
-              opacity={[1, isHovered ? 1 : 0]}
-              transform={['none', `translateY(${isHovered ? 0 : 80}px)`]}
+              opacity={[1, null, null, isHovered ? 1 : 0]}
+              transform={[
+                'none',
+                null,
+                null,
+                `translateY(${isHovered ? 0 : 80}px)`,
+              ]}
               transition={transition}
               color="gray.500"
               minH="50px"

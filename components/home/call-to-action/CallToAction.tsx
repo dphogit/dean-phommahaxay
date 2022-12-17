@@ -4,7 +4,11 @@ import { SectionIds } from '../../../common/routes';
 
 const CallToAction = () => {
   return (
-    <Box mb={['80px', '220px']} as="section" id={SectionIds.CALL_TO_ACTION}>
+    <Box
+      mb={['80px', null, '120px', '220px']}
+      as="section"
+      id={SectionIds.CALL_TO_ACTION}
+    >
       <Card
         variant="filled"
         bgGradient="linear(to-r, gray.800, gray.700)"
@@ -16,7 +20,7 @@ const CallToAction = () => {
         flexDirection="column"
         justifyContent="center"
         alignItems={['stretch', 'center']}
-        borderRadius={['0', '32px']}
+        borderRadius={['0', null, null, '32px']}
         textAlign="center"
       >
         <Heading

@@ -15,14 +15,14 @@ const Experiences = () => {
   return (
     <Box
       as="section"
-      mb={['60px', '220px']}
+      mb={['60px', null, '120px', '220px']}
       id={SectionIds.EXPERIENCES_AND_PROJECTS}
     >
       <Card
         variant="filled"
         minHeight={['auto', '980px']}
         px={['24px', null, null, '80px']}
-        py={['60px', null, null, '80px']}
+        py={['60px', null, '80px']}
         borderRadius={[0, null, null, '32px']}
         bg="gray.800"
         color="white"

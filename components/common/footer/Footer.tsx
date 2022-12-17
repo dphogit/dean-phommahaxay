@@ -29,6 +29,7 @@ const Footer = () => {
         flexDirection={['column', 'row']}
         justifyContent="space-between"
         alignItems="center"
+        px={['24px', null, null, '16px']}
         gap={['12px', 0]}
       >
         <Box>

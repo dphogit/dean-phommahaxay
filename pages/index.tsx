@@ -25,7 +25,7 @@ export default function Home() {
     <PageLayout pageName="Home">
       <Container
         px={[0, null, null, '16px']}
-        animation={[null, null, animation]}
+        animation={[null, null, null, animation]}
       >
         <Hero />
         <Experiences />
