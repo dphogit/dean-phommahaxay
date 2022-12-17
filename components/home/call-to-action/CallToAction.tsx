@@ -10,17 +10,25 @@ const CallToAction = () => {
         bgGradient="linear(to-r, gray.800, gray.700)"
         color="white"
         pt="90px"
-        pb="120px"
+        px={['16px', 0]}
+        pb={['100px', '120px']}
         display="flex"
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        borderRadius="32px"
+        borderRadius={['0', '32px']}
+        textAlign="center"
       >
-        <Heading as="h5" variant="h5" mb="12px" color="teal.300">
+        <Heading as="h5" variant={['h5xs', 'h5']} mb="12px" color="teal.300">
           Peaked your curiosity?
         </Heading>
-        <Heading as="h2" variant="h2" mb="8px">
+        <Heading
+          as="h2"
+          variant="h2"
+          mb="8px"
+          fontSize={['2rem', 'inherit']}
+          lineHeight={['2.75rem', '4rem']}
+        >
           Get to know me more.
         </Heading>
         <Text>Flick me an email, or have a read of my CV.</Text>
