@@ -10,18 +10,18 @@ import {
 
 const Passions = () => {
   return (
-    <Box as="section" mb="220px" px={['16px', 0]} id={SectionIds.PASSIONS}>
+    <Box as="section" mb="220px" px={['24px', 0]} id={SectionIds.PASSIONS}>
       <Box maxWidth={['100%', '75%']} mx="auto" mb="40px">
         <Heading
           as="h5"
-          variant={['h5xs', 'h5']}
+          variant={['h5xs', null, 'h5']}
           textAlign="center"
           mb="12px"
           color="teal.500"
         >
           It&apos;s all about balance
         </Heading>
-        <Heading textAlign="center" as="h2" variant={['h2xs', 'h2']}>
+        <Heading textAlign="center" as="h2" variant={['h2xs', null, 'h2']}>
           Important passions that help me strive for excellence.
         </Heading>
       </Box>

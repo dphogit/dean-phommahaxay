@@ -17,7 +17,7 @@ const Experiences = () => {
       <Card
         variant="filled"
         minHeight="980px"
-        px={['16px', '80px']}
+        px={['24px', '80px']}
         py={['48px', '80px']}
         borderRadius={[0, '32px']}
         bg="gray.800"
@@ -28,7 +28,7 @@ const Experiences = () => {
             <Heading as="h5" variant="h5" mb="12px" color="teal.300">
               My software engineering journey so far
             </Heading>
-            <Heading as="h2" variant={['h2xs', 'h2']} mb="12px">
+            <Heading as="h2" variant={['h2xs', null, 'h2']} mb="12px">
               Industry experiences have been my best teacher.
             </Heading>
             <Text color="gray.300">{SUPPORTING_TEXT}</Text>

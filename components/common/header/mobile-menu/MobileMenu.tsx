@@ -16,7 +16,7 @@ const MobileMenu = ({ menuItems }: MobileMenuProps) => {
       justifyContent="space-between"
       alignItems="stretch"
       pt="24px"
-      px="16px"
+      px="24px"
       pb="16px"
     >
       <Stack spacing="16px">

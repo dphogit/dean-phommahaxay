@@ -15,18 +15,19 @@ const Hero = () => {
   return (
     <PageGrid
       mt={['80px', '200px']}
-      px={['16px']}
+      px={['24px', '16px']}
       mb="220px"
       as="section"
       id={SectionIds.HERO}
       display={['flex', 'grid']}
       flexDirection={['column-reverse']}
     >
-      <GridItem colSpan={7} textAlign={['center', 'left']} mt={['24px', 0]}>
+      <GridItem colSpan={7} mt={['24px', 0]}>
         <Heading
           as="h1"
           variant={['h1xs', null, 'h1']}
           textTransform="uppercase"
+          textAlign={['center', 'left']}
         >
           Dean <br /> Phommahaxay
         </Heading>

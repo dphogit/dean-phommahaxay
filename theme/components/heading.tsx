@@ -10,8 +10,8 @@ export default defineStyleConfig({
     },
 
     h2xs: {
-      fontSize: '2.25rem',
-      lineHeight: 'auto',
+      fontSize: '2rem',
+      lineHeight: '2.5rem',
     },
     h2: {
       fontSize: '3rem',
