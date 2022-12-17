@@ -9,6 +9,10 @@ export default defineStyleConfig({
       fontSize: '4rem',
     },
 
+    h2xs: {
+      fontSize: '2.25rem',
+      lineHeight: 'auto',
+    },
     h2: {
       fontSize: '3rem',
       lineHeight: '4rem',

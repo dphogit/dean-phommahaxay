@@ -10,8 +10,8 @@ import {
 
 const Passions = () => {
   return (
-    <Box as="section" mb="220px" id={SectionIds.PASSIONS}>
-      <Box maxWidth="75%" mx="auto" mb="40px">
+    <Box as="section" mb="220px" px={['16px', 0]} id={SectionIds.PASSIONS}>
+      <Box maxWidth={['100%', '75%']} mx="auto" mb="40px">
         <Heading
           as="h5"
           variant="h5"
@@ -21,11 +21,11 @@ const Passions = () => {
         >
           It&apos;s all about balance
         </Heading>
-        <Heading textAlign="center" as="h2" variant="h2">
+        <Heading textAlign="center" as="h2" variant={['h2xs', 'h2']}>
           Important passions that help me strive for excellence.
         </Heading>
       </Box>
-      <SimpleGrid columns={3} spacing="20px">
+      <SimpleGrid columns={[1, 3]} spacing="20px">
         <PassionOutlinedCard
           mainHeading="Love all things football related."
           smallHeading="Sport"

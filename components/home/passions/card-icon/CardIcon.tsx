@@ -9,10 +9,10 @@ type CardIconProps = {
 const CardIcon = ({ children, ...props }: CardIconProps) => {
   return (
     <Icon
-      h="100px"
-      w="100px"
+      h={['65px', '100px']}
+      w={['65px', '100px']}
       transition="all 0.15s ease-out"
-      fill="gray.500"
+      fill={['teal.500', 'gray.500']}
       {...props}
     >
       {children}
