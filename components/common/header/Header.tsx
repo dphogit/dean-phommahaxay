@@ -46,7 +46,7 @@ const Header = () => {
           display="flex"
           justifyContent="space-between"
           alignItems="center"
-          px={['24px', '16px']}
+          px={['24px', null, null, '16px']}
         >
           <Box>
             <Link
