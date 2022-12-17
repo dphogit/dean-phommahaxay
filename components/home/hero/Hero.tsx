@@ -9,7 +9,7 @@ import { breakpoints } from '../../../theme';
 const INTRO_TEXT = `Final year Software Engineering student at the University of Auckland, New Zealand. Expertise in designing and building products for the web.`;
 
 const Hero = () => {
-  const query = `(max-width: ${breakpoints.sm})`;
+  const query = `(min-width: ${breakpoints.sm})`;
   const [isLargerThanSM] = useSSRMediaQuery(query);
 
   return (
@@ -39,8 +39,8 @@ const Hero = () => {
         <Image
           src={HeroMemoji}
           alt="Dean Phommahaxay Memoji avatar sitting at brown desktop with silver Macbook laptop."
-          height={isLargerThanSM ? 360 : 450}
-          width={isLargerThanSM ? 288 : 360}
+          height={isLargerThanSM ? 450 : 360}
+          width={isLargerThanSM ? 360 : 288}
           style={{ margin: '0 auto' }}
         />
       </GridItem>
