@@ -26,8 +26,10 @@ const Footer = () => {
     <Box py="24px" as="footer" borderTop="1px solid" borderColor="gray.200">
       <Container
         display="flex"
+        flexDirection={['column', 'row']}
         justifyContent="space-between"
         alignItems="center"
+        gap={['12px', 0]}
       >
         <Box>
           <ExternalLink
