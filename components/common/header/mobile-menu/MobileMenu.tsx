@@ -1,5 +1,5 @@
 import { Flex, Stack } from '@chakra-ui/react';
-import { CVButton } from '../../cv-button';
+import { ResumeButton } from '../../resume-button';
 import { ContactButton } from '../../contact-button';
 import MobileMenuItem from './MobileMenuItem';
 import type { MobileMenuItemProps } from './MobileMenuItem';
@@ -25,7 +25,7 @@ const MobileMenu = ({ menuItems }: MobileMenuProps) => {
         ))}
       </Stack>
       <Stack spacing="12px">
-        <CVButton size="lg" />
+        <ResumeButton size="lg" />
         <ContactButton size="lg" />
       </Stack>
     </Flex>

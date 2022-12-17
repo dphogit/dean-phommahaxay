@@ -1,5 +1,5 @@
 import { Box, Card, Flex, Heading, Text } from '@chakra-ui/react';
-import { ContactButton, CVButton } from '../../common';
+import { ContactButton, ResumeButton } from '../../common';
 import { SectionIds } from '../../../common/routes';
 
 const CallToAction = () => {
@@ -37,7 +37,7 @@ const CallToAction = () => {
         <Text>Flick me an email, or have a read of my CV.</Text>
         <Flex mt="20px" gap="24px" flexDirection={['column', 'row']}>
           <ContactButton size="lg" bg="teal.500" />
-          <CVButton
+          <ResumeButton
             size="lg"
             color="gray.200"
             borderColor="gray.200"

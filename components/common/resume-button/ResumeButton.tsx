@@ -1,19 +1,24 @@
+import Link from 'next/link';
 import { Button } from '@chakra-ui/react';
 import type { ButtonProps } from '@chakra-ui/react';
+import { PageRoutes } from '../../../common/routes';
 
-// TODO Link the CV and implement functionality once CV is ready.
-const CVButton = (props: ButtonProps) => {
+const ResumeButton = (props: ButtonProps) => {
   return (
     <Button
+      as={Link}
+      href={PageRoutes.RESUME}
+      target="rel"
+      rel="noreferrer"
       variant="outline"
       color="blue.800"
       borderColor="blue.800"
       fontWeight="normal"
       {...props}
     >
-      Download CV
+      Resume
     </Button>
   );
 };
 
-export default CVButton;
+export default ResumeButton;
