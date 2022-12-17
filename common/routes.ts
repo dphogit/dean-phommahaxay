@@ -14,6 +14,7 @@ export enum SocialRoutes {
   GITHUB = 'https://github.com/dphogit/',
   EMAIL = 'mailto:deanp21@gmail.com',
   LINKEDIN = 'https://www.linkedin.com/in/dean-phommahaxay/',
+  MOVEMBER = 'https://movember.com/m/14689005',
   TWITTER = 'https://twitter.com/_dean21',
 }
 
@@ -34,6 +35,7 @@ export enum ExternalRoutes {
   EXPRESS = 'https://expressjs.com/',
   EIGHT_PUZZLE = 'https://en.wikipedia.org/wiki/sliding_puzzle',
   FIGMA = 'https://www.figma.com/',
+  FOOTBALL_MANAGER = 'https://fminside.net/players/3-fm-23/88031007-dean-phommahaxay',
   GITHUB_REPOSITORY = 'https://github.com/dphogit/dean-phommahaxay',
   JEST = 'https://jestjs.io/',
   MATERIAL_UI = 'https://material-ui.com/',

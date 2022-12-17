@@ -6,6 +6,7 @@ interface PassionOutlinedCardProps {
   smallHeading: string;
   supportingText: string;
   href: string;
+  isExternal?: boolean;
   IconComponent: React.ReactNode;
 }
 
@@ -15,6 +16,7 @@ const PassionOutlinedCard = ({
   smallHeading,
   mainHeading,
   href,
+  isExternal,
   supportingText,
   IconComponent,
 }: PassionOutlinedCardProps) => {
@@ -24,7 +26,11 @@ const PassionOutlinedCard = ({
   const handleMouseLeave = () => setIsHovered(false);
 
   return (
-    <Link href={href} _hover={{ textDecoration: 'none' }}>
+    <Link
+      href={href}
+      _hover={{ textDecoration: 'none' }}
+      isExternal={isExternal}
+    >
       <Card
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

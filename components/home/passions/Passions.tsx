@@ -1,7 +1,12 @@
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import { PassionOutlinedCard } from './passion-outlined-card';
 import { CoinIcon, FootballIcon, PenIcon } from './card-icon';
-import { PageRoutes, SectionIds } from '../../../common/routes';
+import {
+  ExternalRoutes,
+  PageRoutes,
+  SectionIds,
+  SocialRoutes,
+} from '../../../common/routes';
 
 const Passions = () => {
   return (
@@ -21,24 +26,21 @@ const Passions = () => {
         </Heading>
       </Box>
       <SimpleGrid columns={3} spacing="20px">
-        {/* TODO Add links to relevant pages when ready
-              - Football link to blog post
-              - Passion link to Mospace or blog post
-              - Writing link to blog page
-         */}
         <PassionOutlinedCard
           mainHeading="Love all things football related."
           smallHeading="Sport"
           supportingText="Been playing since the age of 7. Train twice a week and play on weekends."
-          href="#"
+          href={ExternalRoutes.FOOTBALL_MANAGER}
           IconComponent={<FootballIcon />}
+          isExternal
         />
         <PassionOutlinedCard
-          mainHeading="Raised $1241 for Movember."
+          mainHeading="Raised $1240 for Movember."
           smallHeading="Charity"
-          href="#"
+          href={SocialRoutes.MOVEMBER}
           IconComponent={<CoinIcon />}
           supportingText="Running and walking 100km across Movember for men’s mental health."
+          isExternal
         />
         <PassionOutlinedCard
           mainHeading="Writing articles for self reflection."
