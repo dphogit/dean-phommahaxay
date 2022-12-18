@@ -4,7 +4,9 @@ import { ColorModeScript } from '@chakra-ui/react';
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <body>
         <ColorModeScript initialColorMode="light" />
         <Main />
