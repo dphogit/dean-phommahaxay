@@ -6,7 +6,7 @@ import { SectionIds } from '../../../common/routes';
 import { useSSRMediaQuery } from '../../../hooks';
 import { breakpoints } from '../../../theme';
 
-const SUPPORTING_TEXT = `While completing my degree through projects, I've completed internships, part-time work and career programs.`;
+const SUPPORTING_TEXT = `While completing my degree, I've completed internships, part-time work and career programs.`;
 
 const Experiences = () => {
   const query = `(min-width: ${breakpoints.md})`;
