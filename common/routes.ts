@@ -11,6 +11,10 @@ export enum SectionIds {
   PASSIONS = 'passions',
 }
 
+export enum Directories {
+  POSTS = 'posts',
+}
+
 export enum SocialRoutes {
   GITHUB = 'https://github.com/dphogit/',
   EMAIL = 'mailto:deanp21@gmail.com',
