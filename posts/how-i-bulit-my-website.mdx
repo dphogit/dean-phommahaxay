@@ -1,0 +1,65 @@
+---
+title: How I Built My Website
+category: Design
+publishedAt: Dec 23, 2022
+---
+
+**IMAGE HERE**
+
+With technology becoming more accessible and plentiful by the day, it’s pretty easy for us developers to experience decision fatigue when it comes to building anything. As engineers, we cannot seem to push aside our egos and love to reinvent the wheel. A common trend is to over-engineer and pick certain tools we want to use before even deciding on what to build or how it provides value to a targeted audience.
+
+When building this website, my main “business” goal was to improve my personal brand and representation in the developer community including the likes of other developers and recruiters. From a technical point of view, I wanted something that I could get up relatively quick but also extensible something I could maintain overtime without friction.
+
+In this article I’ll cover how my website works with more focus of insight into the decisions I made. You may even be inspired to follow this similar process in building your own websites as well.
+
+## How A Website Helps My Personal Brand
+
+If you remember, my goal is to **increase my personal brand** and **not necessarily to just build a website**. It just happens to be one of the most efficient ways. A website is an opportunity to give people a first impression of who I am and my experiences without necessarily having to browse my resume.
+
+A good example of showing professionalism is the domain name [www.deanphommahaxay.com](https://www.deanphommahaxay.com). It’s highly likely my website is accessed through another one of my platforms such as LinkedIn, GitHub or resume. This can be argued as the most important part of my website, a potential viewer (e.g. recruiter) will likely see this first before anything on my website. I don’t want to turn away someone because they are put off by the domain name!
+
+## Design
+
+I used Figma to design my website. I’m not a UI/UX designer, but having working at a start-up for the last year as a frontend engineer, I’ve had to learn some basic design principles and use Figma as a design tool to prototype and mock up our website and platform. I transferred these skills to my website, first creating simple wireframes and then adding colour in the next iteration.
+
+**ADD IMAGE HERE**
+
+When it came to design, I had to make it achieve these goals:
+
+- Be visually appealing to give a sense of professionalism and show pride in my work
+- Someone could view my experiences without having to go through my entire resume
+- People could have the opportunity to get to know about me more - whether it was me as a person or my experiences
+
+The prototype was developed using [Chakra UI’s Figma Kit](https://www.figma.com/community/file/971408767069651759). I had already decided I wanted to use [Chakra UI](https://chakra-ui.com/) because of the overall enjoyable developer experience and shorter development time of using a UI library. Additionally, they have a nice variety of colours.
+
+The colours used mainly consist of teals, navy blues and greys. These cooler colours represent and provide a sense of calm, comfort and safety. The teal adds that touch of magic and personality which I believe reflects who I am as a person.
+
+** ADD IMAGE HERE**
+
+Regarding Typography, I used Ubuntu for display text (headings) and Inter for body text (paragraphs and longer pieces of text). These fonts in combination with different weights and colours help creating an appealing visual hierarchy throughout my website.
+
+I had to also make sure my website was **responsive**. Besides my resume, the other largest source of viewers would likely be from my [LinkedIn](https://www.linkedin.com/in/dean-phommahaxay/) which is primarily used on the mobile application. So it was extremely important for it to be mobile friendly to cater for a large section of my audience.
+
+## Development and Deployment
+
+This website is a [Next.js application](https://nextjs.org/). My blog posts written are in MDX using [`next-mdx-remote`](https://github.com/hashicorp/next-mdx-remote). I’m familiar with Next.js from my work experience and is a great tool for static sites such as a blog.
+
+For UI and styling, I use Chakra UI for the awesome developer experience. It’s got good documentation, a large variety of components and an extensive colour theme. A lot of people tend to build there components and style from scratch, while it is a good learning experience, if not done well and systems are not put in place then it can become easily unmaintainable, inconsistent and difficult to work with. Plus, it means a quicker development time which is the biggest benefit.
+
+Version control system is pretty standard, I just use Git and GitHub where my `main` branch is my production branch. I set up branch protection and have to create/merge PR’s from other branches into it. I use Husky to run a pre-commit check for any ESLint errors/warnings before completing my commit, so I don’t break any builds. Nothing spectacular, simple but efficient.
+
+Deployment is done through [Vercel](https://vercel.com/), the company behind Next.js. Honestly they are awesome, a lot of the steps are automated and optimized meaning all I have to do is update my `main` branch and the rest is taken care of. The only thing I’ve had to configure is adding my domain which I bought off [GoDaddy](https://www.godaddy.com/) which was a seamless experience on both sides.
+
+## Future Plans and Conclusion
+
+At time of writing this, my main two features were my home (landing) page and my blog which was my MVP before going live. I’m definitely happy with how it’s turned out but over time, I definitely want to add more features if it adds value to the site.
+
+Some future plans I have in mind:
+
+- More blog posts! This includes more technical content, experiences and random topics.
+- An efficient system to draft up blog posts, I’m currently drafting in Notion and then transferring to markdown when ready to publish.
+- Dark theme
+
+In this article we covered how my website was built, keeping in mind of the goal of increasing my personal brand. We covered what I wanted to achieve **before doing any technical work**, the tools I used to design and develop the website with both personal and development goals in mind.
+
+If you’re interested in the code feel free to have a look at the [repo](https://github.com/dphogit/dean-phommahaxay), I’ve made it open source. I encourage that if you are a developer to come up with your own components and such, it’s the best way to learn and is more fun!
