@@ -3,6 +3,7 @@ import { Container, Heading } from '@chakra-ui/react';
 import { PageLayout } from '../../components/common';
 import { getBlogPagePosts } from '../../lib/blog';
 import type { BlogPagePreviewPost } from '../../lib/blog/types';
+import { LatestPosts } from '../../components/blog/latest-posts';
 
 const NUM_LATEST_POSTS = 2;
 
@@ -18,8 +19,8 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
   let otherPosts: BlogPagePreviewPost[];
 
   if (blogPagePosts.length > NUM_LATEST_POSTS) {
-    latestPosts = [blogPagePosts[0], blogPagePosts[1]];
-    otherPosts = blogPagePosts.slice(2);
+    latestPosts = blogPagePosts.slice(0, NUM_LATEST_POSTS);
+    otherPosts = blogPagePosts.slice(NUM_LATEST_POSTS);
   } else {
     latestPosts = blogPagePosts;
     otherPosts = [];
@@ -30,17 +31,11 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
   };
 };
 
-// TODO Show the posts.
 const Blog: NextPage<BlogPageProps> = ({ latestPosts, otherPosts }) => {
-  console.log(latestPosts);
-  console.log(otherPosts);
-
   return (
     <PageLayout pageName="Blog">
-      <Container centerContent py="200px">
-        <Heading as="h1" variant="h1" mb="20px">
-          Blog Page Coming Soon!
-        </Heading>
+      <Container mt="150px" px="16px">
+        <LatestPosts latestPosts={latestPosts} />
       </Container>
     </PageLayout>
   );
