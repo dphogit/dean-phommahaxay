@@ -30,6 +30,7 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
   };
 };
 
+// TODO Show the posts.
 const Blog: NextPage<BlogPageProps> = ({ latestPosts, otherPosts }) => {
   console.log(latestPosts);
   console.log(otherPosts);

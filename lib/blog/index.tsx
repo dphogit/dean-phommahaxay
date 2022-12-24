@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { serialize } from 'next-mdx-remote/serialize';
+import readingTime from 'reading-time';
 import { Directories } from '../../common/routes';
 import type { BlogPagePreviewPost, BlogPostFrontMatter } from './types';
 
@@ -47,17 +48,16 @@ export const getBlogPagePosts = async (): Promise<BlogPagePreviewPost[]> => {
       throw new Error(`Frontmatter is missing required fields for ${fileName}`);
     }
 
+    const readMins: string = Math.ceil(
+      readingTime(fileContents).minutes,
+    ).toString();
+
     previewPosts.push({
       ...(frontmatter as BlogPostFrontMatter),
       slug,
-      readMins: '2', // TODO Calculate read mins
+      readMins,
     });
   }
 
-  // Sort by publishedAt date descending
-  return previewPosts.sort((a, b) => {
-    const aDate = new Date(a.publishedAt);
-    const bDate = new Date(b.publishedAt);
-    return bDate.getTime() - aDate.getTime();
-  });
+  return sortPostsByLastPublished(previewPosts);
 };
