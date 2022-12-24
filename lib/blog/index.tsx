@@ -43,7 +43,8 @@ export const getBlogPagePosts = async (): Promise<BlogPagePreviewPost[]> => {
       !frontmatter.title ||
       !frontmatter.description ||
       !frontmatter.category ||
-      !frontmatter.mainImageSrc
+      !frontmatter.mainImageSrc ||
+      !frontmatter.mainImageAlt
     ) {
       throw new Error(`Frontmatter is missing required fields for ${fileName}`);
     }

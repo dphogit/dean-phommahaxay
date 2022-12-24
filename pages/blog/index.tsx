@@ -34,7 +34,10 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
 const Blog: NextPage<BlogPageProps> = ({ latestPosts, otherPosts }) => {
   return (
     <PageLayout pageName="Blog">
-      <Container mt="150px" px="16px">
+      <Container mt="150px" px="16px" mb="100px">
+        <Heading as="h2" variant="h2" textAlign="center" mb="40px">
+          The Latest
+        </Heading>
         <LatestPosts latestPosts={latestPosts} />
       </Container>
     </PageLayout>

@@ -4,6 +4,7 @@ export type BlogPostFrontMatter = {
   publishedAt: string;
   category: string;
   mainImageSrc: string;
+  mainImageAlt: string;
 };
 
 export type BlogPagePreviewPost = BlogPostFrontMatter & {
