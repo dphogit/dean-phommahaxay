@@ -1,5 +1,4 @@
-import { Box, Heading, Link, Stack, Text } from '@chakra-ui/react';
-import Image from 'next/image';
+import { Box, Heading, Img, Link, Stack, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import type { BlogPagePreviewPost } from '../../../lib/blog/types';
 import { PageRoutes } from '../../../common/routes';
@@ -20,15 +19,7 @@ const PostPreview = ({ post }: PostProps) => {
         transition="opacity 0.15s ease-out"
         _hover={{ textDecoration: 'none', opacity: 0.75 }}
       >
-        <Box position="relative" height="320px">
-          <Image
-            src={post.mainImageSrc}
-            alt={post.mainImageAlt}
-            fill
-            priority
-            sizes="width: 100%"
-          />
-        </Box>
+        <Img src={post.mainImageSrc} alt={post.mainImageAlt} />
         <Stack spacing="8px" mt="16px">
           <Heading as="h6" variant="h6" color="teal.500">
             {post.category}
