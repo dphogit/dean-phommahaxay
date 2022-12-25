@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import readingTime from 'reading-time';
 import { Directories } from '../../common/routes';
@@ -13,6 +14,15 @@ const sortPostsByLastPublished = (
     const bDate = new Date(b.publishedAt);
     return bDate.getTime() - aDate.getTime();
   });
+};
+
+export const getMinsReadingTime = (content: string): string => {
+  return Math.ceil(readingTime(content).minutes).toString();
+};
+
+export const getAllSlugs = (): string[] => {
+  const fileNames = fs.readdirSync(Directories.POSTS);
+  return fileNames.map((fileName) => fileName.replace(/\.mdx?$/, ''));
 };
 
 export const getBlogPagePosts = async (): Promise<BlogPagePreviewPost[]> => {
@@ -49,16 +59,51 @@ export const getBlogPagePosts = async (): Promise<BlogPagePreviewPost[]> => {
       throw new Error(`Frontmatter is missing required fields for ${fileName}`);
     }
 
-    const readMins: string = Math.ceil(
-      readingTime(fileContents).minutes,
-    ).toString();
-
     previewPosts.push({
       ...(frontmatter as BlogPostFrontMatter),
       slug,
-      readMins,
+      readMins: getMinsReadingTime(fileContents),
     });
   }
 
   return sortPostsByLastPublished(previewPosts);
+};
+
+export const getBlogPostDataBySlug = async (
+  slug: string,
+): Promise<{
+  mdxSource: MDXRemoteSerializeResult;
+  frontMatter: BlogPostFrontMatter;
+  readMins: string;
+}> => {
+  const filePath = path.join(Directories.POSTS, `${slug}.mdx`);
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+
+  const mdxSource = await serialize(fileContents, {
+    parseFrontmatter: true,
+    mdxOptions: { development: false }, // https://github.com/hashicorp/next-mdx-remote/issues/307#issuecomment-1363415249 Work
+  });
+
+  const frontmatter = mdxSource.frontmatter;
+
+  if (!frontmatter) {
+    throw new Error(`No frontmatter found for ${slug}`);
+  }
+
+  // Type check frontmatter for required fields
+  if (
+    !frontmatter.title ||
+    !frontmatter.description ||
+    !frontmatter.category ||
+    !frontmatter.mainImageSrc ||
+    !frontmatter.mainImageAlt
+  ) {
+    throw new Error(`Frontmatter is missing required fields for ${slug}`);
+  }
+
+  return {
+    frontMatter: frontmatter as BlogPostFrontMatter,
+    mdxSource,
+    readMins: getMinsReadingTime(fileContents),
+  };
 };
