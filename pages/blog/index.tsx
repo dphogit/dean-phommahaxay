@@ -31,7 +31,7 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
   };
 };
 
-const Blog: NextPage<BlogPageProps> = ({ latestPosts, otherPosts }) => {
+const Blog: NextPage<BlogPageProps> = ({ latestPosts }) => {
   return (
     <PageLayout pageName="Blog">
       <Container mt="150px" px="16px" mb="100px">

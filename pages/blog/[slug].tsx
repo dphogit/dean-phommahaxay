@@ -83,7 +83,7 @@ export const getStaticProps: GetStaticProps<PostProps, PostParams> = async ({
 const Post: NextPage<PostProps> = ({ mdxSource, frontMatter, readMins }) => {
   return (
     <PageLayout pageName={frontMatter.title}>
-      <Container mt="160px" mb="100px" as="article">
+      <Container mt={['120px', '160px']} mb={['60px', '100px']} as="article">
         <PostHeader frontMatter={frontMatter} readMins={readMins} />
         <PostBody mdxSource={mdxSource} />
       </Container>

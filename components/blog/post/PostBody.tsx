@@ -12,23 +12,30 @@ import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { MDXComponents } from 'mdx/types';
 
 const components: MDXComponents = {
-  h2: (props) => <Heading as="h2" variant="h3" {...props} mt="64px" />,
+  h2: (props) => (
+    <Heading
+      as="h2"
+      variant={['h3xs', null, null, 'h3']}
+      mt="64px"
+      {...props}
+    />
+  ),
   a: (props) => <Link color="blue.500" {...props} />,
   p: (props) => (
     <Text
-      mt="24px"
-      fontSize="20px"
+      mt={['20px', '24px']}
+      fontSize={['16px', '20px']}
       lineHeight="1.6"
       color="gray.700"
       {...props}
     />
   ),
-  img: (props) => <Img my="48px" {...props} />,
+  img: (props) => <Img my={['36px', '48px']} {...props} />,
   ul: (props) => <UnorderedList mb="48px" {...props} />,
   li: (props) => (
     <ListItem
       my="8px"
-      fontSize="20px"
+      fontSize={['16px', '20px']}
       lineHeight="1.6"
       color="gray.700"
       {...props}
@@ -42,7 +49,7 @@ interface PostBodyProps {
 
 const PostBody = ({ mdxSource }: PostBodyProps) => {
   return (
-    <Container maxWidth="container.md" mt="80px">
+    <Container maxWidth="container.md" mt={['40px', '60px']}>
       <MDXRemote {...mdxSource} components={components} />
     </Container>
   );
