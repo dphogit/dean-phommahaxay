@@ -1,23 +1,21 @@
 ---
 title: How I Designed And Built My Website
-description: An insight into the process I followed to build my website and the decisions I made which help achieve my website's goals.
+description: An insight into the building my website and the decisions I made to achieve my website's goals.
 category: Design
 publishedAt: Dec 23, 2022
 mainImageSrc: /blog-post-images/how-i-built-my-website/landing-page-desktop-and-mobile.png
 mainImageAlt: Landing page desktop and mobile designs
 ---
 
-With technology becoming more accessible and plentiful by the day, it’s pretty easy for us developers to experience decision fatigue when it comes to building anything. As engineers, we cannot seem to push aside our egos and love to reinvent the wheel. A common trend is to over-engineer and pick certain tools we want to use before even deciding on what to build or how it provides value to a targeted audience.
+When building this website, my main objective was to create a professional presence of myself in the developer community to appeal to other developers and recruiters. From a technical point of view, I wanted something that I could get up relatively quick but also extensible something I could maintain overtime.
 
-When building this website, my main “business” goal was to improve my personal brand and representation in the developer community including the likes of other developers and recruiters. From a technical point of view, I wanted something that I could get up relatively quick but also extensible something I could maintain overtime without friction.
-
-In this article I’ll cover how my website works with more focus of insight into the decisions I made. You may even be inspired to follow this similar process in building your own websites as well.
+In this article I’ll cover how my website works discussing the decisions I made before and along the way. You may even be inspired to build your own website as well.
 
 ## How A Website Helps My Personal Brand
 
-If you remember, my goal is to **increase my personal brand** and **not necessarily to just build a website**. It just happens to be one of the most efficient ways. A website is an opportunity to give people a first impression of who I am and my experiences without necessarily having to browse my resume.
+If you remember, my goal is to **increase my personal brand** and **not necessarily to just build a website**. However, a website is a great if not the best opportunity to give people a first impression of who I am and my experiences without necessarily having to browse my resume.
 
-A good example of showing professionalism is the domain name [www.deanphommahaxay.com](https://www.deanphommahaxay.com). It’s highly likely my website is accessed through another one of my platforms such as LinkedIn, GitHub or resume. This can be argued as the most important part of my website, a potential viewer (e.g. recruiter) will likely see this first before anything on my website. I don’t want to turn away someone because they are put off by the domain name!
+Something I want to mention is how important the domain name is and why you should buy one if you are considering your own website. My domain [www.deanphommahaxay.com](https://www.deanphommahaxay.com) is highly likely to be accessed via other platforms such as LinkedIn, GitHub or resume. This can be argued as the most important part of my website, a potential viewer (e.g. recruiter) will likely see this first before anything on my website. I don’t want to turn away someone because they are put off by the domain name!
 
 ## Design
 
@@ -27,41 +25,41 @@ I used Figma to design my website. I’m not a UI/UX designer, but having workin
 
 When it came to design, I had to make it achieve these goals:
 
-- Be visually appealing to give a sense of professionalism and show pride in my work
+- Be visually appealing to give a sense of professionalism and show the care I put in my work
 - Someone could view my experiences without having to go through my entire resume
 - People could have the opportunity to get to know about me more - whether it was me as a person or my experiences
 
-The prototype was developed using [Chakra UI’s Figma Kit](https://www.figma.com/community/file/971408767069651759). I had already decided I wanted to use [Chakra UI](https://chakra-ui.com/) because of the overall enjoyable developer experience and shorter development time of using a UI library. Additionally, they have a nice variety of colours.
+The designs were made using [Chakra UI’s Figma Kit](https://www.figma.com/community/file/971408767069651759). From previous enjoyable developer experience, I used [Chakra UI](https://chakra-ui.com/) in the hope of shorter development time of using a UI library. Additionally, they have an appealing theme.
 
-The colours used mainly consist of teals, navy blues and greys. These cooler colours represent and provide a sense of calm, comfort and safety. The teal adds that touch of magic and personality which I believe reflects who I am as a person.
+The colours I used mainly consist of teals, navy blues and greys. These cooler colours represent and provide a sense of calm, comfort and safety. The teal adds that touch of magic and personality which I believe as a whole help explain who I am as a person.
 
 ![Blue and teal theme colours](/blog-post-images/how-i-built-my-website/theme-teals-and-blue.png)
 
-Regarding Typography, I used Ubuntu for display text (headings) and Inter for body text (paragraphs and longer pieces of text). These fonts in combination with different weights and colours help creating an appealing visual hierarchy throughout my website.
+Regarding Typography, I used Ubuntu for display text (headings) and Inter for body text (paragraphs and longer pieces of text). These fonts in combination with different weights and colours help create a visual hierarchy throughout my website.
 
-I had to also make sure my website was **responsive**. Besides my resume, the other largest source of viewers would likely be from my [LinkedIn](https://www.linkedin.com/in/dean-phommahaxay/) which is primarily used on the mobile application. So it was extremely important for it to be mobile friendly to cater for a large section of my audience.
+I had to also make sure my website was **responsive**. Besides my resume, the other largest source of viewers would likely be from my [LinkedIn](https://www.linkedin.com/in/dean-phommahaxay/) on the mobile app. It's important for the website to be mobile friendly to cater for a large section of my audience.
 
 ## Development and Deployment
 
-This website is a [Next.js application](https://nextjs.org/). My blog posts written are in MDX using [`next-mdx-remote`](https://github.com/hashicorp/next-mdx-remote). I’m familiar with Next.js from my work experience and is a great tool for static sites such as a blog.
+This website is a [Next.js application](https://nextjs.org/). My blog posts are written in MDX using [`next-mdx-remote`](https://github.com/hashicorp/next-mdx-remote) for rendering. I’m familiar with Next.js from my work experience. It's a great tool for static sites such as a blog.
 
 ![Blog layout mock-up](/blog-post-images/how-i-built-my-website/blog-layout-mockup.png)
 
-For UI and styling, I use Chakra UI for the awesome developer experience. It’s got good documentation, a large variety of components and an extensive colour theme. A lot of people tend to build there components and style from scratch, while it is a good learning experience, if not done well and systems are not put in place then it can become easily unmaintainable, inconsistent and difficult to work with. Plus, it means a quicker development time which is the biggest benefit.
+As mentioned earlier,  I used Chakra UI for UI/styling for the awesome developer experience. It’s got good documentation, a large variety of components and an extensive colour theme. A lot of people tend to suggest or build their own components and style from scratch. While it is a good learning experience, if not done well and systems are not put in place then it can become easily unmaintainable, inconsistent and difficult to work with. For me, there is no need to reinvent the wheel and I wanted to focus on getting my message across in a presentable way and have a quick development turnaround.
 
-Version control system is pretty standard, I just use Git and GitHub where my `main` branch is my production branch. I set up branch protection and have to create/merge PR’s from other branches into it. I use Husky to run a pre-commit check for any ESLint errors/warnings before completing my commit, so I don’t break any builds. Nothing spectacular, simple but efficient.
+Version control was pretty standard, I just use Git and GitHub where my `main` branch is my production branch. I set up branch protection and have to create/merge PR’s from other branches into it. I use Husky to run a pre-commit check for any ESLint errors/warnings before completing my commit, so I don’t break any builds. Nothing spectacular, simple but effective.
 
-Deployment is done through [Vercel](https://vercel.com/), the company behind Next.js. Honestly they are awesome, a lot of the steps are automated and optimized meaning all I have to do is update my `main` branch and the rest is taken care of. The only thing I’ve had to configure is adding my domain which I bought off [GoDaddy](https://www.godaddy.com/) which was a seamless experience on both sides.
+Deployment is done through [Vercel](https://vercel.com/), the company behind creating Next.js. Honestly they are awesome, a lot of the steps are automated and optimized meaning all I have to do is update my `main` branch and the rest is taken care of. The only thing I’ve had to configure is adding my domain which I bought off [GoDaddy](https://www.godaddy.com/) which was a seamless experience on both sides.
 
 ## Future Plans and Conclusion
 
-At time of writing this, my main two features were my home (landing) page and my blog which was my MVP before going live. I’m definitely happy with how it’s turned out but over time, I definitely want to add more features if it adds value to the site.
+At time of writing this, my main two features are my home (landing) page and my blog which is my MVP before going officially live. I’m definitely happy with how it’s turned out.
 
 Some future plans I have in mind:
 
 - More blog posts! This includes more technical content, experiences and random topics.
-- An efficient system to draft up blog posts, I’m currently drafting in Notion and then transferring to markdown when ready to publish.
-- Dark theme
+- A more efficient blogging system, I'm drafting in Notion for the rich text experience and manually transfer to Markdown. In future posts I plan to create some components to use in my posts hence I'm using `next-mdx-remote` rather than using Notion as a CMS. Also, I have to rebuild my site every time I make a change or create a post which is not ideal.
+- Dark theme! What site doesn’t have a dark theme these days?
 
 In this article we covered how my website was built, keeping in mind of the goal of increasing my personal brand. We covered what I wanted to achieve **before doing any technical work**, the tools I used to design and develop the website with both personal and development goals in mind.
 

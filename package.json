@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:watch": "next-remote-watch ./posts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "husky": "^8.0.2",
+    "next-remote-watch": "^2.0.0",
     "prettier": "^2.8.0"
   }
 }

@@ -10,7 +10,12 @@ const PostHeader = ({ frontMatter, readMins }: PostHeaderProps) => {
   const publishedAtAndReadMins = `${frontMatter.publishedAt} | ${readMins} min read`;
 
   return (
-    <Container as="header" maxWidth="container.lg" textAlign="center">
+    <Container
+      as="header"
+      maxWidth="container.lg"
+      textAlign="center"
+      px={[0, null, null, '16px']}
+    >
       <Heading
         as="h5"
         variant={['h5xs', null, null, 'h5']}

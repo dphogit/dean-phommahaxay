@@ -3,7 +3,8 @@ import { Container, Heading } from '@chakra-ui/react';
 import { PageLayout } from '../../components/common';
 import { getBlogPagePosts } from '../../lib/blog';
 import type { BlogPagePreviewPost } from '../../lib/blog/types';
-import { LatestPosts } from '../../components/blog/latest-posts';
+import { LatestPosts } from '../../components/blog';
+import { CallToAction } from '../../components/home';
 
 const NUM_LATEST_POSTS = 2;
 

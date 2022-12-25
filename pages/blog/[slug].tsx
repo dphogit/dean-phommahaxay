@@ -9,7 +9,7 @@ import { Directories } from '../../common/routes';
 import { BlogPostFrontMatter } from '../../lib/blog/types';
 import readingTime from 'reading-time';
 import { PageLayout } from '../../components/common';
-import { PostBody, PostHeader } from '../../components/blog/post';
+import { PostBody, PostHeader } from '../../components/blog';
 
 interface PostProps {
   mdxSource: MDXRemoteSerializeResult;
@@ -83,7 +83,12 @@ export const getStaticProps: GetStaticProps<PostProps, PostParams> = async ({
 const Post: NextPage<PostProps> = ({ mdxSource, frontMatter, readMins }) => {
   return (
     <PageLayout pageName={frontMatter.title}>
-      <Container mt={['120px', '160px']} mb={['60px', '100px']} as="article">
+      <Container
+        mt={['120px', '160px']}
+        mb={['60px', '100px']}
+        as="article"
+        px={['24px', null, null, '16px']}
+      >
         <PostHeader frontMatter={frontMatter} readMins={readMins} />
         <PostBody mdxSource={mdxSource} />
       </Container>

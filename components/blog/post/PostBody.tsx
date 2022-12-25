@@ -1,4 +1,5 @@
 import {
+  Code,
   Container,
   Heading,
   Img,
@@ -41,6 +42,7 @@ const components: MDXComponents = {
       {...props}
     />
   ),
+  code: (props) => <Code mx="2px" fontSize={['14px', '18px']} {...props} />,
 };
 
 interface PostBodyProps {
@@ -49,7 +51,11 @@ interface PostBodyProps {
 
 const PostBody = ({ mdxSource }: PostBodyProps) => {
   return (
-    <Container maxWidth="container.md" mt={['40px', '60px']}>
+    <Container
+      maxWidth="container.md"
+      mt={['40px', '60px']}
+      px={[0, null, null, '16px']}
+    >
       <MDXRemote {...mdxSource} components={components} />
     </Container>
   );
