@@ -23,7 +23,7 @@ const PostPreview = ({ post }: PostProps) => {
         <Box position="relative" height="320px">
           <Image
             src={post.mainImageSrc}
-            alt={post.title}
+            alt={post.mainImageAlt}
             fill
             priority
             sizes="width: 100%"

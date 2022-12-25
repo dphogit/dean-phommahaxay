@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { MDXRemote } from 'next-mdx-remote';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import { Container, Heading } from '@chakra-ui/react';
 import fs from 'fs';
@@ -11,6 +11,7 @@ import { BlogPostFrontMatter } from '../../lib/blog/types';
 import readingTime from 'reading-time';
 import { PageLayout } from '../../components/common';
 import { MDXComponents } from 'mdx/types';
+import PostHeader from '../../components/blog/post/PostHeader';
 
 interface PostProps {
   mdxSource: MDXRemoteSerializeResult;
@@ -86,11 +87,11 @@ const components: MDXComponents = {};
 const Post: NextPage<PostProps> = ({ mdxSource, frontMatter, readMins }) => {
   return (
     <PageLayout pageName={frontMatter.title}>
-      <Container maxWidth="3xl" my="160px">
-        <Heading as="h1" variant="h3">
-          {frontMatter.title}
-        </Heading>
-        <MDXRemote {...mdxSource} components={components} />
+      <Container mt="160px" mb="100px">
+        <PostHeader frontMatter={frontMatter} readMins={readMins} />
+        <Container maxWidth="container.md">
+          <MDXRemote {...mdxSource} components={components} />
+        </Container>
       </Container>
     </PageLayout>
   );
