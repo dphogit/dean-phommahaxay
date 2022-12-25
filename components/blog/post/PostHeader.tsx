@@ -17,7 +17,7 @@ const PostHeader = ({ frontMatter, readMins }: PostHeaderProps) => {
       <Heading as="h1" variant="h2">
         {frontMatter.title}
       </Heading>
-      <Text fontSize="20px" mt="24px" color="gray.500">
+      <Text fontSize="20px" lineHeight="1.5" mt="24px" color="gray.500">
         {frontMatter.description}
       </Text>
       <Text color="gray.500" mt="16px" mb="24px">
