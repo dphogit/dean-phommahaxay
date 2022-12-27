@@ -50,8 +50,8 @@ const Experiences = () => {
             <Image
               src={ExperiencesMemoji}
               alt="Dean Phommahaxay Memoji avatar fist bumping towards reader."
-              height={238}
-              width={250}
+              style={{ width: '250px', height: 'auto' }}
+              priority
             />
           )}
         </Flex>
