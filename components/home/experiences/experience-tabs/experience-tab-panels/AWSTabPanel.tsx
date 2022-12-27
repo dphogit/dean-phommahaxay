@@ -33,7 +33,7 @@ const AWSTabPanel = () => {
           in weekly technical labs, including{' '}
           <ExternalLink href={ExternalRoutes.AWS_EC2}>EC2 Linux</ExternalLink>,{' '}
           <ExternalLink href={ExternalRoutes.AWS_S3}>S3</ExternalLink> storage
-          buckets,
+          buckets,{' '}
           <ExternalLink href={ExternalRoutes.AWS_REKOGNITION}>
             Rekognition
           </ExternalLink>{' '}

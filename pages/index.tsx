@@ -1,32 +1,12 @@
-import { Container, keyframes } from '@chakra-ui/react';
+import { NextPage } from 'next';
+import { Container } from '@chakra-ui/react';
 import { CallToAction, Experiences, Hero, Passions } from '../components/home';
 import { PageLayout } from '../components/common';
 
-const fadeSlideIn = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  
-  50% {
-    opacity: 1;
-    transform: translateY(-2px);
-  }
-  
-  100% {
-    transform: translateY(0);
-  }
-`;
-
-const animation = `${fadeSlideIn} 600ms ease-out`;
-
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <PageLayout pageName="Home">
-      <Container
-        px={[0, null, null, '16px']}
-        animation={[null, null, null, animation]}
-      >
+      <Container px={[0, null, null, '16px']}>
         <Hero />
         <Experiences />
         <Passions />
@@ -34,4 +14,6 @@ export default function Home() {
       </Container>
     </PageLayout>
   );
-}
+};
+
+export default Home;
