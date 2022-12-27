@@ -8,7 +8,7 @@ interface LatestPostsProps {
 
 const LatestPosts = ({ latestPosts }: LatestPostsProps) => {
   return (
-    <SimpleGrid columns={[1, null, null, 2]} spacing="20px" mx="auto">
+    <SimpleGrid columns={[1, null, null, 2]} spacing="36px" mx="auto">
       {latestPosts.map((post) => (
         <PostPreview key={post.slug} post={post} />
       ))}
