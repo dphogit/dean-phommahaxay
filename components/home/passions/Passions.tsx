@@ -31,7 +31,7 @@ const Passions = () => {
         </Heading>
       </Box>
       <SimpleGrid
-        columns={[1, null, null, 3]}
+        columns={[1, null, null, 2]}
         width={['100%', null, '400px', 'auto']}
         mx="auto"
         spacing="20px"
@@ -51,13 +51,6 @@ const Passions = () => {
           IconComponent={<CoinIcon />}
           supportingText="Running and walking 100km across Movember for men’s mental health."
           isExternal
-        />
-        <PassionOutlinedCard
-          mainHeading="Writing articles for self reflection."
-          smallHeading="Creative"
-          supportingText="I write blog posts to share and reflect on my experiences."
-          href={PageRoutes.BLOG}
-          IconComponent={<PenIcon />}
         />
       </SimpleGrid>
     </Box>

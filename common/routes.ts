@@ -1,6 +1,5 @@
 export enum PageRoutes {
   HOME = '/',
-  BLOG = '/blog',
   RESUME = '/resume.pdf',
 }
 
