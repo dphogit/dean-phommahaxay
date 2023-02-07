@@ -22,7 +22,7 @@ const Passions = () => {
           textAlign="center"
           mx="auto"
           mb="12px"
-          color="teal.500"
+          color={['teal.600', null, 'teal.500']}
         >
           It&apos;s all about balance
         </Heading>

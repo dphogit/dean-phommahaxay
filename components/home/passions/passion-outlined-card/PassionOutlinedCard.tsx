@@ -71,7 +71,7 @@ const PassionOutlinedCard = ({
                 as="span"
                 variant="h6"
                 color={[
-                  'teal.500',
+                  'teal.600',
                   null,
                   null,
                   isHovered ? 'teal.600' : 'gray.600',
@@ -92,7 +92,7 @@ const PassionOutlinedCard = ({
                 `translateY(${isHovered ? 0 : 80}px)`,
               ]}
               transition={transition}
-              color="gray.500"
+              color="gray.600"
               minH="50px"
             >
               {supportingText}
