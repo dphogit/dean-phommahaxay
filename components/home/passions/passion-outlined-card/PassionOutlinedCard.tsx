@@ -75,7 +75,7 @@ const PassionOutlinedCard = ({
                   'teal.500',
                   null,
                   null,
-                  isHovered ? 'teal.500' : 'gray.500',
+                  isHovered ? 'teal.600' : 'gray.600',
                 ]}
               >
                 {smallHeading}

@@ -38,7 +38,7 @@ const Footer = () => {
             display="flex"
             alignItems="center"
             lineHeight="28px"
-            opacity={0.5}
+            opacity={0.75}
             transition={transition}
             _hover={{ opacity: 1 }}
           >
