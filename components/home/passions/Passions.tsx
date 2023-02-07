@@ -1,9 +1,8 @@
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import { PassionOutlinedCard } from './passion-outlined-card';
-import { CoinIcon, FootballIcon, PenIcon } from './card-icon';
+import { CoinIcon, FootballIcon } from './card-icon';
 import {
   ExternalRoutes,
-  PageRoutes,
   SectionIds,
   SocialRoutes,
 } from '../../../common/routes';
