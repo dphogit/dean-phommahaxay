@@ -42,8 +42,8 @@ const PassionOutlinedCard = ({
         _hover={{
           '& svg': {
             fill: 'teal.500',
-            height: '65px',
-            width: '65px',
+            height: '70px',
+            width: '70px',
           },
           boxShadow: 'xl',
           transform: 'scale(1.01)',
@@ -68,9 +68,8 @@ const PassionOutlinedCard = ({
               width="80%"
             >
               <Heading
-                as="h6"
+                as="span"
                 variant="h6"
-                mb="12px"
                 color={[
                   'teal.500',
                   null,
@@ -80,7 +79,7 @@ const PassionOutlinedCard = ({
               >
                 {smallHeading}
               </Heading>
-              <Heading as="h4" variant="h4">
+              <Heading as="h3" variant="h4" mt="8px">
                 {mainHeading}
               </Heading>
             </Box>

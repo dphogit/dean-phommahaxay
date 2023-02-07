@@ -24,7 +24,7 @@ const CallToAction = () => {
         textAlign="center"
       >
         <Heading
-          as="h5"
+          as="div"
           variant={['h5xs', null, 'h5']}
           mb="12px"
           color="teal.300"

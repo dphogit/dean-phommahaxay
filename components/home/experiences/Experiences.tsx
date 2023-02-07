@@ -30,7 +30,7 @@ const Experiences = () => {
         <Flex alignItems={[null, null, 'center', 'flex-start']}>
           <Box pr={[0, null, '20px', '120px']}>
             <Heading
-              as="h5"
+              as="span"
               variant={['h5xs', null, 'h5']}
               color="teal.300"
               mb="12px"

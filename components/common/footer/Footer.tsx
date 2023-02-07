@@ -50,16 +50,16 @@ const Footer = () => {
           </ExternalLink>
         </Box>
         <Stack direction="row" alignItems="center" spacing="16px">
-          <ExternalLink href={SocialRoutes.GITHUB}>
+          <ExternalLink href={SocialRoutes.GITHUB} aria-label="Github">
             <SocialIcon as={GitHubLogoIcon} />
           </ExternalLink>
-          <ExternalLink href={SocialRoutes.LINKEDIN}>
+          <ExternalLink href={SocialRoutes.LINKEDIN} aria-label="LinkedIn">
             <SocialIcon as={LinkedInLogoIcon} />
           </ExternalLink>
-          <ExternalLink href={SocialRoutes.TWITTER}>
+          <ExternalLink href={SocialRoutes.TWITTER} aria-label="Twitter">
             <SocialIcon as={TwitterLogoIcon} />
           </ExternalLink>
-          <ExternalLink href={SocialRoutes.EMAIL}>
+          <ExternalLink href={SocialRoutes.EMAIL} aria-label="Email">
             <SocialIcon as={EnvelopeClosedIcon} />
           </ExternalLink>
         </Stack>

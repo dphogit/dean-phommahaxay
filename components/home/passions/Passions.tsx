@@ -17,9 +17,10 @@ const Passions = () => {
     >
       <Box maxWidth={['100%', null, '90%', '75%']} mx="auto" mb="40px">
         <Heading
-          as="h5"
+          as="div"
           variant={['h5xs', null, 'h5']}
           textAlign="center"
+          mx="auto"
           mb="12px"
           color="teal.500"
         >
