@@ -60,14 +60,6 @@ const Header = () => {
           <Flex columnGap="16px" alignItems="center" justifyContent="flex-end">
             {isLargerThanSM ? (
               <>
-                <Link
-                  as={NextLink}
-                  href={PageRoutes.BLOG}
-                  mr="12px"
-                  color="blue.800"
-                >
-                  Blog
-                </Link>
                 <ResumeButton />
                 <ContactButton />
               </>
