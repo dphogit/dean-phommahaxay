@@ -42,8 +42,8 @@ const PassionOutlinedCard = ({
         _hover={{
           '& svg': {
             fill: 'teal.500',
-            height: '65px',
-            width: '65px',
+            height: '70px',
+            width: '70px',
           },
           boxShadow: 'xl',
           transform: 'scale(1.01)',
@@ -68,19 +68,18 @@ const PassionOutlinedCard = ({
               width="80%"
             >
               <Heading
-                as="h6"
+                as="span"
                 variant="h6"
-                mb="12px"
                 color={[
-                  'teal.500',
+                  'teal.600',
                   null,
                   null,
-                  isHovered ? 'teal.500' : 'gray.500',
+                  isHovered ? 'teal.600' : 'gray.600',
                 ]}
               >
                 {smallHeading}
               </Heading>
-              <Heading as="h4" variant="h4">
+              <Heading as="h3" variant="h4" mt="8px">
                 {mainHeading}
               </Heading>
             </Box>
@@ -93,7 +92,7 @@ const PassionOutlinedCard = ({
                 `translateY(${isHovered ? 0 : 80}px)`,
               ]}
               transition={transition}
-              color="gray.500"
+              color="gray.600"
               minH="50px"
             >
               {supportingText}

@@ -24,7 +24,7 @@ const CallToAction = () => {
         textAlign="center"
       >
         <Heading
-          as="h5"
+          as="div"
           variant={['h5xs', null, 'h5']}
           mb="12px"
           color="teal.300"
@@ -36,7 +36,7 @@ const CallToAction = () => {
         </Heading>
         <Text>Flick me an email, or read my resume.</Text>
         <Flex mt="20px" gap="24px" flexDirection={['column', 'row']}>
-          <ContactButton size="lg" bg="teal.500" />
+          <ContactButton size="lg" bg="teal.600" />
           <ResumeButton
             size="lg"
             color="gray.200"

@@ -15,6 +15,10 @@ const PageLayout = ({ children, pageName }: PageLayoutProps) => {
     <>
       <Head>
         <title>{pageTitle}</title>
+        <meta
+          name="description"
+          content="Dean Phommahaxay's personal website"
+        />
       </Head>
       <Header />
       {children}
