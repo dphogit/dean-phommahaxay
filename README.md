@@ -4,7 +4,8 @@
 
 ![Demo](public/media/demo.png?raw=true)
 
-## 🔌 Contact:
+## 🔌 Contact
+
 - Email: <mailto:deanp21@gmail.com>
 - LinkedIn: <https://www.linkedin.com/in/dean-phommahaxay/>
 - Twitter: <https://twitter.com/_dean21>
