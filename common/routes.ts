@@ -5,9 +5,10 @@ export enum PageRoutes {
 
 export enum SectionIds {
   CALL_TO_ACTION = 'call-to-action',
-  EXPERIENCES_AND_PROJECTS = 'experiences-and-projects',
+  EXPERIENCE = 'experience',
   HERO = 'hero',
   PASSIONS = 'passions',
+  PROJECTS = 'projects',
 }
 
 export enum Directories {
@@ -35,12 +36,14 @@ export enum ExternalRoutes {
   AWS_S3 = 'https://aws.amazon.com/s3/',
   BFS = 'https://en.wikipedia.org/wiki/Breadth-first_search',
   CHAKRA_UI = 'https://chakra-ui.com/',
+  CONSTRUCT_QA = 'https://github.com/dphogit/ConstructQA',
   DFS = 'https://en.wikipedia.org/wiki/Depth-first_search',
   EXPRESS = 'https://expressjs.com/',
   EIGHT_PUZZLE = 'https://en.wikipedia.org/wiki/sliding_puzzle',
   FIGMA = 'https://www.figma.com/',
   FOOTBALL_MANAGER = 'https://fminside.net/players/3-fm-23/88031007-dean-phommahaxay',
   GITHUB_REPOSITORY = 'https://github.com/dphogit/dean-phommahaxay',
+  HASEL = 'https://hasel.auckland.ac.nz/',
   JEST = 'https://jestjs.io/',
   MATERIAL_UI = 'https://material-ui.com/',
   MIXPANEL = 'https://mixpanel.com/',

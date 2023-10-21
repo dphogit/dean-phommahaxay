@@ -29,6 +29,10 @@ export default defineStyleConfig({
       fontSize: '1.5rem',
       lineHeight: '2rem',
     },
+    h4xs: {
+      fontSize: '1.25rem',
+      lineHeight: '1.5rem',
+    },
 
     h5xs: {
       fontSize: '1.125rem',

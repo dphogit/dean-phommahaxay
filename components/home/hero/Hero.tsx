@@ -6,7 +6,8 @@ import { SectionIds } from '../../../common/routes';
 import { useSSRMediaQuery } from '../../../hooks';
 import { breakpoints } from '../../../theme';
 
-const INTRO_TEXT = `Final year Software Engineering student at the University of Auckland, New Zealand. Expertise in designing and building products for the web.`;
+const INTRO_TEXT =
+  'Software Engineer with expertise in full-stack development, AI and machine learning. Bringing our boldest tech visions to life.';
 
 const Hero = () => {
   const query = [
