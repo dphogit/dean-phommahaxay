@@ -16,7 +16,7 @@ const Experiences = () => {
     <Box
       as="section"
       mb={['60px', null, '120px', '220px']}
-      id={SectionIds.EXPERIENCES_AND_PROJECTS}
+      id={SectionIds.EXPERIENCE}
     >
       <Card
         variant="filled"
