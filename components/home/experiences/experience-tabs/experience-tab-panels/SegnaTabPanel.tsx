@@ -57,7 +57,8 @@ const SegnaTabPanel = () => {
       ]}
       title={
         <>
-          Software Engineering Intern to Part-Timer{' '}
+          Software Engineer
+          <br />
           <ExternalLink href={ExternalRoutes.SEGNA}>
             @ Segna (YC W22)
           </ExternalLink>

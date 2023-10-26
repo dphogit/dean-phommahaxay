@@ -8,7 +8,7 @@ const ResumeButton = (props: ButtonProps) => {
     <Button
       as={Link}
       href={PageRoutes.RESUME}
-      target="rel"
+      target="_blank"
       rel="noreferrer"
       variant="outline"
       color="blue.800"
