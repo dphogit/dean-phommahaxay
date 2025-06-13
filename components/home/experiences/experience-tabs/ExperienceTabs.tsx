@@ -2,6 +2,7 @@ import { TabList, TabPanels, Tabs } from '@chakra-ui/react';
 import ExperienceTab from './ExperienceTab';
 import {
   AWSTabPanel,
+  DatacomTabPanel,
   ScottTabPanel,
   SegnaTabPanel,
 } from './experience-tab-panels';
@@ -15,11 +16,13 @@ const ExperienceTabs = () => {
         flexDirection={['column', 'row']}
         borderRadius={['24px', '32px']}
       >
+        <ExperienceTab>Datacom</ExperienceTab>
         <ExperienceTab>Segna</ExperienceTab>
         <ExperienceTab>AWS ECIP</ExperienceTab>
         <ExperienceTab>Scott PHS</ExperienceTab>
       </TabList>
       <TabPanels>
+        <DatacomTabPanel />
         <SegnaTabPanel />
         <AWSTabPanel />
         <ScottTabPanel />

@@ -5,7 +5,6 @@ import {
   ExternalLinkIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
-  TwitterLogoIcon,
 } from '@radix-ui/react-icons';
 import { ExternalRoutes, SocialRoutes } from '../../../common/routes';
 
@@ -55,9 +54,6 @@ const Footer = () => {
           </ExternalLink>
           <ExternalLink href={SocialRoutes.LINKEDIN} aria-label="LinkedIn">
             <SocialIcon as={LinkedInLogoIcon} />
-          </ExternalLink>
-          <ExternalLink href={SocialRoutes.TWITTER} aria-label="Twitter">
-            <SocialIcon as={TwitterLogoIcon} />
           </ExternalLink>
           <ExternalLink href={SocialRoutes.EMAIL} aria-label="Email">
             <SocialIcon as={EnvelopeClosedIcon} />

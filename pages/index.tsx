@@ -15,8 +15,8 @@ const Home: NextPage = () => {
       <Container px={[0, null, null, '16px']}>
         <Hero />
         <Experiences />
-        <Projects />
         <Passions />
+        <Projects />
         <CallToAction />
       </Container>
     </PageLayout>

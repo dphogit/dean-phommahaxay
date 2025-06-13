@@ -6,8 +6,7 @@ import { SectionIds } from '../../../common/routes';
 import { useSSRMediaQuery } from '../../../hooks';
 import { breakpoints } from '../../../theme';
 
-const INTRO_TEXT =
-  'Software Engineer with expertise in full-stack development, AI and machine learning. Bringing our boldest tech visions to life.';
+const INTRO_TEXT = 'Software Engineer. Continuous Learner.';
 
 const Hero = () => {
   const query = [
@@ -53,7 +52,7 @@ const Hero = () => {
           mb="24px"
           width={[null, null, '75%', '100%']}
           mx={[null, null, 'auto', 0]}
-          textAlign={['left', 'center', null, 'left']}
+          textAlign={['center', null, null, 'left']}
         >
           {INTRO_TEXT}
         </Text>
