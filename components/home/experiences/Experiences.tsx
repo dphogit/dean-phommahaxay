@@ -6,7 +6,8 @@ import { SectionIds } from '../../../common/routes';
 import { useSSRMediaQuery } from '../../../hooks';
 import { breakpoints } from '../../../theme';
 
-const SUPPORTING_TEXT = `While completing my degree, I've completed internships, part-time work and career programs.`;
+const HEADING = `Where I've Been and What I've Done.`;
+const SUPPORTING_TEXT = `Building real products, working across teams, and solving meaningful problems have shaped how I think and build as an engineer today.`;
 
 const Experiences = () => {
   const query = `(min-width: ${breakpoints.md})`;
@@ -42,7 +43,7 @@ const Experiences = () => {
               variant={['h2xs', null, 'h2']}
               mb={['20px', '12px']}
             >
-              Industry experiences have been my best teacher.
+              {HEADING}
             </Heading>
             <Text color="gray.300">{SUPPORTING_TEXT}</Text>
           </Box>

@@ -1,6 +1,6 @@
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import { PassionOutlinedCard } from './passion-outlined-card';
-import { CoinIcon, FootballIcon } from './card-icon';
+import { CoinIcon, FootballIcon, RunningIcon } from './card-icon';
 import {
   ExternalRoutes,
   SectionIds,
@@ -27,21 +27,29 @@ const Passions = () => {
           It&apos;s all about balance
         </Heading>
         <Heading textAlign="center" as="h2" variant={['h2xs', null, 'h2']}>
-          Important passions that help me strive for excellence.
+          I like to get out and about.
         </Heading>
       </Box>
       <SimpleGrid
-        columns={[1, null, null, 2]}
+        columns={[1, null, null, 3]}
         width={['100%', null, '400px', 'auto']}
         mx="auto"
         spacing="20px"
       >
         <PassionOutlinedCard
-          mainHeading="Love all things football related."
+          mainHeading="Love all things football."
           smallHeading="Sport"
-          supportingText="Been playing since the age of 7. Train twice a week and play on weekends."
+          supportingText="Play for a club where I train during the week and play on weekends."
           href={ExternalRoutes.FOOTBALL_MANAGER}
           IconComponent={<FootballIcon />}
+          isExternal
+        />
+        <PassionOutlinedCard
+          mainHeading="Off-season marathon running."
+          smallHeading="Endurance"
+          supportingText="I enjoy the challenge of running races outside the footy season."
+          href={ExternalRoutes.MARATHON}
+          IconComponent={<RunningIcon />}
           isExternal
         />
         <PassionOutlinedCard

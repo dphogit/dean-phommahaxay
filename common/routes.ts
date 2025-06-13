@@ -20,7 +20,6 @@ export enum SocialRoutes {
   EMAIL = 'mailto:deanp21@gmail.com',
   LINKEDIN = 'https://www.linkedin.com/in/dean-phommahaxay/',
   MOVEMBER = 'https://movember.com/m/14689005',
-  TWITTER = 'https://twitter.com/_dean21',
 }
 
 export enum ExternalRoutes {
@@ -37,14 +36,18 @@ export enum ExternalRoutes {
   BFS = 'https://en.wikipedia.org/wiki/Breadth-first_search',
   CHAKRA_UI = 'https://chakra-ui.com/',
   CONSTRUCT_QA = 'https://github.com/dphogit/ConstructQA',
+  DATAPAY = 'https://datacom.com/nz/en/products/datapay',
+  DATAPAY_API_REFERENCE = 'https://developers.datacomdirectaccess.co.nz/api/documentation/',
+  DATAPAY_WORKDAY = 'https://marketplace.workday.com/en-US/apps/414105/datapays-global-payroll-cloud-connector-for-workday/overview',
   DFS = 'https://en.wikipedia.org/wiki/Depth-first_search',
   EXPRESS = 'https://expressjs.com/',
   EIGHT_PUZZLE = 'https://en.wikipedia.org/wiki/sliding_puzzle',
   FIGMA = 'https://www.figma.com/',
-  FOOTBALL_MANAGER = 'https://fminside.net/players/3-fm-23/88031007-dean-phommahaxay',
+  FOOTBALL_MANAGER = 'https://fminside.net/players/5-fm-243/88031007-dean-phommahaxay',
   GITHUB_REPOSITORY = 'https://github.com/dphogit/dean-phommahaxay',
   HASEL = 'https://hasel.auckland.ac.nz/',
   JEST = 'https://jestjs.io/',
+  MARATHON = 'https://www.sportsplits.com/races/barfoot-thompson-auckland-marathon-2024/events/3/results/individuals/23309',
   MATERIAL_UI = 'https://material-ui.com/',
   MIXPANEL = 'https://mixpanel.com/',
   NEXT = 'https://nextjs.org/',

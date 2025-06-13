@@ -87,10 +87,10 @@ const Projects = () => {
           mb="12px"
           color={['teal.600', null, 'teal.500']}
         >
-          Featured Work
+          Non-work related code
         </Heading>
         <Heading textAlign="center" as="h2" variant={['h2xs', null, 'h2']}>
-          Cool things I&apos;ve worked on recently.
+          Some other cool stuff I&apos;ve worked on.
         </Heading>
       </Box>
       <VStack spacing={['72px', null, null, '96px']}>
