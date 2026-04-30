@@ -37,27 +37,27 @@ const Passions = () => {
         spacing="20px"
       >
         <PassionOutlinedCard
-          mainHeading="Love all things football."
-          smallHeading="Sport"
-          supportingText="Play for a club where I train during the week and play on weekends."
-          href={ExternalRoutes.FOOTBALL_MANAGER}
-          IconComponent={<FootballIcon />}
-          isExternal
-        />
-        <PassionOutlinedCard
-          mainHeading="Off-season marathon running."
+          mainHeading="Probably training for a running race."
           smallHeading="Endurance"
-          supportingText="I enjoy the challenge of running races outside the footy season."
+          supportingText="I enjoy the challenge and science behind long distance road running."
           href={ExternalRoutes.MARATHON}
           IconComponent={<RunningIcon />}
           isExternal
         />
         <PassionOutlinedCard
-          mainHeading="Raised $1240 for Movember."
+          mainHeading="Love all things football."
+          smallHeading="Sport"
+          supportingText="Played for a club for the majority of my life. Now parked for my running hobby."
+          href={ExternalRoutes.FOOTBALL_MANAGER}
+          IconComponent={<FootballIcon />}
+          isExternal
+        />
+        <PassionOutlinedCard
+          mainHeading="Raised $1760 for Movember."
           smallHeading="Charity"
           href={SocialRoutes.MOVEMBER}
           IconComponent={<CoinIcon />}
-          supportingText="Running and walking 100km across Movember for men’s mental health."
+          supportingText="Participating in various physical challenges for men’s mental health."
           isExternal
         />
       </SimpleGrid>
