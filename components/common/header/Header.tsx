@@ -4,6 +4,7 @@ import { ResumeButton } from '../resume-button';
 import { ContactButton } from '../contact-button';
 import { Logo } from '../logo';
 import { PageRoutes } from '../../../common/routes';
+import HeaderLink from './HeaderLink';
 
 const Header = () => {
   return (
@@ -23,7 +24,7 @@ const Header = () => {
           alignItems="center"
           px={['24px', null, null, '16px']}
         >
-          <Box>
+          <Flex columnGap="32px" alignItems="center">
             <Link
               as={NextLink}
               href={PageRoutes.HOME}
@@ -31,7 +32,8 @@ const Header = () => {
             >
               <Logo />
             </Link>
-          </Box>
+            <HeaderLink href={PageRoutes.BLOG}>Blog</HeaderLink>
+          </Flex>
           <Flex columnGap="16px" alignItems="center" justifyContent="flex-end">
             <ResumeButton />
             <ContactButton />
