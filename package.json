@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.2",
@@ -23,15 +24,19 @@
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "framer-motion": "^6.5.1",
+    "gray-matter": "^4.0.3",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sharp": "^0.31.2",
-    "typescript": "4.9.3"
+    "typescript": "4.9.3",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "husky": "^8.0.2",
+    "jest": "^30.4.2",
     "prettier": "^2.8.0"
   }
 }
