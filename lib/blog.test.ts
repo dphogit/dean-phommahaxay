@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import 'path';
 import * as z from 'zod';
 
-import { getBlogMetaData } from './blog';
+import { getAllSlugs, getBlogMetaData } from './blog';
 
 jest.mock('fs/promises');
 
@@ -30,11 +30,10 @@ date: '2026-11-01'
 Content relating to the Auckland Marathon 2026.`,
   },
   {
-    filename: 'gold-coast-marathon-2027.md',
+    filename: 'london-marathon-2027.md',
     content: `---
 title: London Marathon 2027
 date: '2027-04-24'
-slug: two-day-london-marathon-2027
 ---
 Content relating to the two-day London Marathon 2027.`,
   },
@@ -43,7 +42,6 @@ Content relating to the two-day London Marathon 2027.`,
     content: `---
 title: Gold Coast Marathon 2026
 date: '2026-07-05'
-slug: gold-coast-marathon-2026
 ---
 Content relating to the Gold Coast Marathon 2026.`,
   },
@@ -62,26 +60,24 @@ describe('getBlogMetaData', () => {
     // Arrange: Mock filenames and contents they would return
     mockedReadDir.mockResolvedValue(testData.map((info) => info.filename));
     mockedReadFile.mockImplementation(async (filename) => {
-      const index = testData.findIndex((info) => info.filename == filename);
-      if (index == -1) {
+      const item = testData.find((info) => info.filename === filename);
+      if (!item) {
         throw Error(`${filename} not in test data.`);
       }
-      return testData[index].content;
+      return item.content;
     });
 
     // Act
     const result = await getBlogMetaData();
 
-    // Assert: Check date descending, mapping, and slug logic
+    // Assert: Check date descending and mapping
     expect(result).toEqual([
       {
-        // custom slug different from file name
-        slug: 'two-day-london-marathon-2027',
+        slug: 'london-marathon-2027',
         title: 'London Marathon 2027',
         date: '2027-04-24',
       },
       {
-        // slug not given => falls back to file name
         slug: 'auckland-marathon-2026',
         title: 'Auckland Marathon 2026',
         date: '2026-11-01',
@@ -100,7 +96,6 @@ describe('getBlogMetaData', () => {
     mockedReadFile.mockImplementation(async () => {
       return `---
 title: A Guide to the London Marathon
-slug: london-marathon-guide
 ---
 This is a guide to running the London Marathon!`;
     });
@@ -110,5 +105,25 @@ This is a guide to running the London Marathon!`;
 
     // Assert: Throws a Zod error as the required date is not in frontmatter.
     expect(action()).rejects.toThrow(z.ZodError);
+  });
+});
+
+describe('getAllSlugs', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should return all post file names with the .md extension removed', async () => {
+    // Arrange: Mock retrieved Markdown file names
+    mockedReadDir.mockResolvedValue(testData.map((info) => info.filename));
+
+    // Act
+    const result = await getAllSlugs();
+
+    // Assert: check lengths and contents
+    expect(result.length).toBe(3);
+    expect(result).toContain('london-marathon-2027');
+    expect(result).toContain('auckland-marathon-2026');
+    expect(result).toContain('gold-coast-marathon-2026');
   });
 });

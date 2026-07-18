@@ -10,13 +10,6 @@ const FrontMatter = z.object({
    * A string date expected in the 'YYYY-MM-DD' ISO format.
    */
   date: z.iso.date(),
-
-  /**
-   * An optional URL slug for the blog post. If not provided in the markdown
-   * file's frontmatter, it will default to the markdown file's name without
-   * the '.md' extension. e.g. 'my-post.md' => 'my-post'
-   */
-  slug: z.string().optional(),
 });
 
 type FrontMatter = z.infer<typeof FrontMatter>;
@@ -24,29 +17,45 @@ type FrontMatter = z.infer<typeof FrontMatter>;
 export type BlogPostMetaData = {
   title: string;
   slug: string;
+  date: string;
 };
 
-const POSTS_DIR = path.join(process.cwd(), 'blog');
+export type BlogPost = {
+  meta: BlogPostMetaData;
+  contentHtml: string;
+};
+
+const BLOG_POSTS_DIR = path.join(process.cwd(), 'blog');
+
+function removeMarkdownExtension(fileName: string): string {
+  return fileName.replace(/.md$/, '');
+}
+
+async function getMarkdownFiles(): Promise<string[]> {
+  const names = await fs.readdir(BLOG_POSTS_DIR);
+  return names.filter((name) => path.extname(name).toLowerCase() == '.md');
+}
+
+async function readPostFile(fileName: string): Promise<string> {
+  const filePath = path.join(BLOG_POSTS_DIR, fileName);
+  return await fs.readFile(filePath, 'utf8');
+}
+
+async function getPostMatter(fileName: string) {
+  const fileContent = await readPostFile(fileName);
+  const matterResult = matter(fileContent);
+  return matterResult;
+}
 
 export async function getBlogMetaData(): Promise<BlogPostMetaData[]> {
-  const names = await fs.readdir(POSTS_DIR);
-  const markdownFileNames = names.filter(
-    (name) => path.extname(name).toLowerCase() == '.md',
-  );
+  const markdownFileNames = await getMarkdownFiles();
 
   const promises = markdownFileNames.map(async (fileName) => {
-    // Read and parse frontmatter
-    const filePath = path.join(POSTS_DIR, fileName);
-    const fileContent = await fs.readFile(filePath, 'utf8');
-    const matterResult = matter(fileContent);
+    const matterResult = await getPostMatter(fileName);
     const metadata = FrontMatter.parse(matterResult.data);
 
-    // The slug url is optional metadata, we default to use the markdown
-    // file name with the '.md' extension removed.
-    const slug = metadata.slug ?? fileName.replace(/.md$/, '');
-
     return {
-      slug,
+      slug: removeMarkdownExtension(fileName),
       title: metadata.title,
       date: metadata.date,
     };
@@ -58,4 +67,20 @@ export async function getBlogMetaData(): Promise<BlogPostMetaData[]> {
   const dateDescendingData = data.sort((a, b) => b.date.localeCompare(a.date));
 
   return dateDescendingData;
+}
+
+export async function getAllSlugs(): Promise<string[]> {
+  const markdownFileNames = await getMarkdownFiles();
+  return markdownFileNames.map(removeMarkdownExtension);
+}
+
+export async function getBlogPost(slug: string): Promise<BlogPost> {
+  const fileName = `${slug}.md`;
+  const matterResult = await getPostMatter(fileName);
+  const metadata = FrontMatter.parse(matterResult.data);
+
+  return {
+    meta: { ...metadata, slug },
+    contentHtml: matterResult.content, // TODO: Convert to HTML
+  };
 }
