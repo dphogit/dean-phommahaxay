@@ -26,6 +26,9 @@ const testData = [
     content: `---
 title: Auckland Marathon 2026
 date: '2026-11-01'
+image:
+  src: auckland-marathon-2026.jpg
+  alt: Auckland Marathon 2026 Finish Line
 ---
 Content relating to the Auckland Marathon 2026.`,
   },
@@ -34,6 +37,9 @@ Content relating to the Auckland Marathon 2026.`,
     content: `---
 title: London Marathon 2027
 date: '2027-04-24'
+image:
+  src: london-marathon-2027.jpg
+  alt: London Marathon 2027 Finish Line
 ---
 Content relating to the two-day London Marathon 2027.`,
   },
@@ -42,6 +48,9 @@ Content relating to the two-day London Marathon 2027.`,
     content: `---
 title: Gold Coast Marathon 2026
 date: '2026-07-05'
+image:
+  src: gold-coast-marathon-2026.jpg
+  alt: Gold Coast Marathon 2026 Finish Line
 ---
 Content relating to the Gold Coast Marathon 2026.`,
   },
@@ -76,16 +85,28 @@ describe('getBlogMetaData', () => {
         slug: 'london-marathon-2027',
         title: 'London Marathon 2027',
         date: '2027-04-24',
+        image: {
+          src: 'london-marathon-2027.jpg',
+          alt: 'London Marathon 2027 Finish Line',
+        },
       },
       {
         slug: 'auckland-marathon-2026',
         title: 'Auckland Marathon 2026',
         date: '2026-11-01',
+        image: {
+          src: 'auckland-marathon-2026.jpg',
+          alt: 'Auckland Marathon 2026 Finish Line',
+        },
       },
       {
         slug: 'gold-coast-marathon-2026',
         title: 'Gold Coast Marathon 2026',
         date: '2026-07-05',
+        image: {
+          src: 'gold-coast-marathon-2026.jpg',
+          alt: 'Gold Coast Marathon 2026 Finish Line',
+        },
       },
     ]);
   });

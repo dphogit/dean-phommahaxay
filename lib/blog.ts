@@ -1,15 +1,16 @@
 import fs from 'fs/promises';
-import path from 'path';
 import matter from 'gray-matter';
+import path from 'path';
 import * as z from 'zod';
 
 const FrontMatter = z.object({
   title: z.string(),
-
-  /**
-   * A string date expected in the 'YYYY-MM-DD' ISO format.
-   */
+  /** A string date expected in the 'YYYY-MM-DD' ISO format. */
   date: z.iso.date(),
+  image: z.object({
+    src: z.string(),
+    alt: z.string(),
+  }),
 });
 
 type FrontMatter = z.infer<typeof FrontMatter>;
@@ -18,11 +19,15 @@ export type BlogPostMetaData = {
   title: string;
   slug: string;
   date: string;
+  image: {
+    src: string;
+    alt: string;
+  };
 };
 
 export type BlogPost = {
   meta: BlogPostMetaData;
-  contentHtml: string;
+  contentMarkdown: string;
 };
 
 const BLOG_POSTS_DIR = path.join(process.cwd(), 'blog');
@@ -56,8 +61,7 @@ export async function getBlogMetaData(): Promise<BlogPostMetaData[]> {
 
     return {
       slug: removeMarkdownExtension(fileName),
-      title: metadata.title,
-      date: metadata.date,
+      ...metadata,
     };
   });
 
@@ -81,6 +85,6 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
 
   return {
     meta: { ...metadata, slug },
-    contentHtml: matterResult.content, // TODO: Convert to HTML
+    contentMarkdown: matterResult.content,
   };
 }

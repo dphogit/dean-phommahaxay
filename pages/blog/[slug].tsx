@@ -1,11 +1,13 @@
-import { Container, Heading, Text } from '@chakra-ui/react';
+import { Container, Heading, Text, VStack } from '@chakra-ui/react';
 import {
   GetStaticPathsResult,
   GetStaticPropsContext,
   GetStaticPropsResult,
   NextPage,
 } from 'next';
+import Image from 'next/image';
 import { ParsedUrlQuery } from 'querystring';
+import { MarkdownContent } from '../../components/blog';
 import { PageLayout } from '../../components/common';
 import { BlogPost, getAllSlugs, getBlogPost } from '../../lib/blog';
 
@@ -45,11 +47,23 @@ export async function getStaticProps(
 const BlogPostPage: NextPage<BlogPostPageProps> = ({ post }) => {
   return (
     <PageLayout pageName={post.meta.title}>
-      <Container pt="128px" pb="64px" px={['24px', null, null, '16px']}>
-        <Heading as="h1">{post.meta.title}</Heading>
-        <Text color="GrayText">{post.meta.date}</Text>
-        <p>{post.contentHtml}</p>
-        {/* <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} /> */}
+      <Container px={0} maxWidth="container.sm" position="relative">
+        <Image
+          src={post.meta.image.src}
+          alt={post.meta.image.alt}
+          width={1200}
+          height={800}
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+          style={{ borderRadius: '4px' }}
+        />
+        <VStack alignItems="start" my="32px" spacing="4px">
+          <Heading as="h1">{post.meta.title}</Heading>
+          <Text color="GrayText" fontSize="sm">
+            {post.meta.date}
+          </Text>
+        </VStack>
+        <MarkdownContent content={post.contentMarkdown} />
       </Container>
     </PageLayout>
   );
