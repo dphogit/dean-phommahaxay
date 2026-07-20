@@ -7,6 +7,7 @@ import {
 } from 'next';
 import Image from 'next/image';
 import { ParsedUrlQuery } from 'querystring';
+import { formatPublishDate } from '../../common/dates';
 import { MarkdownContent } from '../../components/blog';
 import { PageLayout } from '../../components/common';
 import { BlogPost, getAllSlugs, getBlogPost } from '../../lib/blog';
@@ -44,6 +45,12 @@ export async function getStaticProps(
   };
 }
 
+function formatSubtext(post: BlogPost) {
+  const publishDate = formatPublishDate(post.meta.date);
+  const timeToReadMins = Math.ceil(post.meta.readingTimeStats.minutes);
+  return `${publishDate} · ${timeToReadMins} min read`;
+}
+
 const BlogPostPage: NextPage<BlogPostPageProps> = ({ post }) => {
   return (
     <PageLayout pageName={post.meta.title}>
@@ -60,7 +67,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ post }) => {
         <VStack alignItems="start" mt="32px" mb="16px" spacing="4px">
           <Heading as="h1">{post.meta.title}</Heading>
           <Text color="GrayText" fontSize="sm">
-            {post.meta.date}
+            {formatSubtext(post)}
           </Text>
         </VStack>
         <MarkdownContent content={post.contentMarkdown} />

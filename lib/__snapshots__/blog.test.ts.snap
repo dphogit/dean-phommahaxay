@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`getBlogMetaData should parse markdown files and sort them by date descending 1`] = `
+[
+  {
+    "date": "2027-04-24",
+    "image": {
+      "alt": "London Marathon 2027 Finish Line",
+      "src": "london-marathon-2027.jpg",
+    },
+    "readingTimeStats": {
+      "minutes": 0.04,
+      "text": "1 min read",
+      "time": 2400,
+      "words": 8,
+    },
+    "slug": "london-marathon-2027",
+    "title": "London Marathon 2027",
+  },
+  {
+    "date": "2026-11-01",
+    "image": {
+      "alt": "Auckland Marathon 2026 Finish Line",
+      "src": "auckland-marathon-2026.jpg",
+    },
+    "readingTimeStats": {
+      "minutes": 0.035,
+      "text": "1 min read",
+      "time": 2100,
+      "words": 7,
+    },
+    "slug": "auckland-marathon-2026",
+    "title": "Auckland Marathon 2026",
+  },
+  {
+    "date": "2026-07-05",
+    "image": {
+      "alt": "Gold Coast Marathon 2026 Finish Line",
+      "src": "gold-coast-marathon-2026.jpg",
+    },
+    "readingTimeStats": {
+      "minutes": 0.04,
+      "text": "1 min read",
+      "time": 2400,
+      "words": 8,
+    },
+    "slug": "gold-coast-marathon-2026",
+    "title": "Gold Coast Marathon 2026",
+  },
+]
+`;

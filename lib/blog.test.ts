@@ -79,36 +79,38 @@ describe('getBlogMetaData', () => {
     // Act
     const result = await getBlogMetaData();
 
+    expect(result).toMatchSnapshot();
+
     // Assert: Check date descending and mapping
-    expect(result).toEqual([
-      {
-        slug: 'london-marathon-2027',
-        title: 'London Marathon 2027',
-        date: '2027-04-24',
-        image: {
-          src: 'london-marathon-2027.jpg',
-          alt: 'London Marathon 2027 Finish Line',
-        },
-      },
-      {
-        slug: 'auckland-marathon-2026',
-        title: 'Auckland Marathon 2026',
-        date: '2026-11-01',
-        image: {
-          src: 'auckland-marathon-2026.jpg',
-          alt: 'Auckland Marathon 2026 Finish Line',
-        },
-      },
-      {
-        slug: 'gold-coast-marathon-2026',
-        title: 'Gold Coast Marathon 2026',
-        date: '2026-07-05',
-        image: {
-          src: 'gold-coast-marathon-2026.jpg',
-          alt: 'Gold Coast Marathon 2026 Finish Line',
-        },
-      },
-    ]);
+    // expect(result).toEqual([
+    //   {
+    //     slug: 'london-marathon-2027',
+    //     title: 'London Marathon 2027',
+    //     date: '2027-04-24',
+    //     image: {
+    //       src: 'london-marathon-2027.jpg',
+    //       alt: 'London Marathon 2027 Finish Line',
+    //     },
+    //   },
+    //   {
+    //     slug: 'auckland-marathon-2026',
+    //     title: 'Auckland Marathon 2026',
+    //     date: '2026-11-01',
+    //     image: {
+    //       src: 'auckland-marathon-2026.jpg',
+    //       alt: 'Auckland Marathon 2026 Finish Line',
+    //     },
+    //   },
+    //   {
+    //     slug: 'gold-coast-marathon-2026',
+    //     title: 'Gold Coast Marathon 2026',
+    //     date: '2026-07-05',
+    //     image: {
+    //       src: 'gold-coast-marathon-2026.jpg',
+    //       alt: 'Gold Coast Marathon 2026 Finish Line',
+    //     },
+    //   },
+    // ]);
   });
 
   it('should throw an error when frontmatter does not follow expected schema', async () => {

@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import matter from 'gray-matter';
 import path from 'path';
+import readingTime, { ReadTimeResults } from 'reading-time';
 import * as z from 'zod';
 
 const FrontMatter = z.object({
@@ -23,6 +24,7 @@ export type BlogPostMetaData = {
     src: string;
     alt: string;
   };
+  readingTimeStats: ReadTimeResults;
 };
 
 export type BlogPost = {
@@ -58,9 +60,11 @@ export async function getBlogMetaData(): Promise<BlogPostMetaData[]> {
   const promises = markdownFileNames.map(async (fileName) => {
     const matterResult = await getPostMatter(fileName);
     const metadata = FrontMatter.parse(matterResult.data);
+    const readingTimeStats = readingTime(matterResult.content);
 
     return {
       slug: removeMarkdownExtension(fileName),
+      readingTimeStats,
       ...metadata,
     };
   });
@@ -82,9 +86,10 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
   const fileName = `${slug}.md`;
   const matterResult = await getPostMatter(fileName);
   const metadata = FrontMatter.parse(matterResult.data);
+  const readingTimeStats = readingTime(matterResult.content);
 
   return {
-    meta: { ...metadata, slug },
+    meta: { ...metadata, readingTimeStats, slug },
     contentMarkdown: matterResult.content,
   };
 }

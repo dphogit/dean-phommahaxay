@@ -9,19 +9,22 @@ type BlogPostProps = {
   post: BlogPostMetaData;
 };
 
-const BlogPostCard = ({ post }: BlogPostProps) => {
+function useCreateHrefToPost(slug: string) {
   const router = useRouter();
+  return `${router.pathname}/${slug}`;
+}
 
-  function createHrefToPost(slug: string) {
-    return `${router.pathname}/${slug}`;
-  }
+function formatSubtext(post: BlogPostMetaData) {
+  const publishDate = formatPublishDate(post.date);
+  const timeToReadMins = Math.ceil(post.readingTimeStats.minutes);
+  return `${publishDate} · ${timeToReadMins} min read`;
+}
+
+const BlogPostCard = ({ post }: BlogPostProps) => {
+  const href = useCreateHrefToPost(post.slug);
 
   return (
-    <Link
-      as={NextLink}
-      href={createHrefToPost(post.slug)}
-      _hover={{ textDecoration: 'none' }}
-    >
+    <Link as={NextLink} href={href} _hover={{ textDecoration: 'none' }}>
       <Card
         position="relative"
         variant="outline"
@@ -45,7 +48,7 @@ const BlogPostCard = ({ post }: BlogPostProps) => {
             {post.title}
           </Heading>
           <Text color="GrayText" fontSize="sm">
-            {formatPublishDate(post.date)}
+            {formatSubtext(post)}
           </Text>
         </CardBody>
       </Card>
