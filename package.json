@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:ci": "next build --no-lint",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
@@ -35,14 +36,14 @@
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.1",
     "sharp": "^0.31.2",
-    "typescript": "4.9.3",
-    "zod": "^4.4.3"
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "husky": "^8.0.2",
     "jest": "^30.4.2",
-    "prettier": "^2.8.0"
+    "prettier": "^2.8.0",
+    "typescript": "^4.9.3"
   }
 }

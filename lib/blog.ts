@@ -6,8 +6,8 @@ import * as z from 'zod';
 
 const FrontMatter = z.object({
   title: z.string(),
-  /** A string date expected in the 'YYYY-MM-DD' ISO format. */
-  date: z.iso.date(),
+  /** A string date expected in 'YYYY-MM-DD' format. */
+  date: z.string().date(),
   image: z.object({
     src: z.string(),
     alt: z.string(),
