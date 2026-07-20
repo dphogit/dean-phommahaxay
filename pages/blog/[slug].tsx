@@ -55,9 +55,9 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ post }) => {
           height={800}
           priority
           sizes="(max-width: 768px) 100vw, 50vw"
-          style={{ borderRadius: '4px' }}
+          style={{ borderRadius: '8px' }}
         />
-        <VStack alignItems="start" my="32px" spacing="4px">
+        <VStack alignItems="start" mt="32px" mb="16px" spacing="4px">
           <Heading as="h1">{post.meta.title}</Heading>
           <Text color="GrayText" fontSize="sm">
             {post.meta.date}

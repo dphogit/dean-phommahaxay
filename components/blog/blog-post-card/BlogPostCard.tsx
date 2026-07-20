@@ -41,12 +41,7 @@ const BlogPostCard = ({ post }: BlogPostProps) => {
           }}
         />
         <CardBody>
-          <Heading
-            as="h2"
-            size="md"
-            mb="4px"
-            style={{ lineClamp: 1, WebkitLineClamp: 1, overflow: 'hidden' }}
-          >
+          <Heading as="h2" size="md" mb="4px" noOfLines={1}>
             {post.title}
           </Heading>
           <Text color="GrayText" fontSize="sm">
