@@ -11,7 +11,7 @@ import { PageLayout } from '../components/common';
 
 const Home: NextPage = () => {
   return (
-    <PageLayout pageName="Home">
+    <PageLayout pageName="Home" disableContainer>
       <Container px={[0, null, null, '16px']}>
         <Hero />
         <Experiences />

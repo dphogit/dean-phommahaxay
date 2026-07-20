@@ -6,7 +6,7 @@ import { SectionIds } from '../../../common/routes';
 import { useSSRMediaQuery } from '../../../hooks';
 import { breakpoints } from '../../../theme';
 
-const INTRO_TEXT = 'Software Engineer. Continuous Learner.';
+const INTRO_TEXT = 'Software Engineer and Hobby Jogger.';
 
 const Hero = () => {
   const query = [

@@ -1,0 +1,52 @@
+name: PR Quality Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repo code
+      - name: Checkout context
+        uses: actions/checkout@v7
+
+      # 2. Setup node.js env and auto cache dependencies
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      # 3. Persist Next.js cache between builds
+      # https://nextjs.org/docs/13/pages/building-your-application/deploying/ci-build-caching
+      - name: Cache Next.js Build
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/.next/cache
+          # Generate a new cache whenever packages or source files change.
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          # If source files changed but packages didn't, rebuild from a prior cache.
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+
+      # 4. Clean install
+      - name: Install Dependencies
+        run: npm ci
+
+      # 5. Lint check
+      - name: Link Check
+        run: npm run lint
+
+      # 6. Unit tests
+      - name: Run Unit Tests
+        run: npm test
+
+      # 7. Final build check - implicit linting that runs with `next build`
+      # is skipped as it is already done in a fail-fast step before.
+      - name: Build Application
+        run: npm run build:ci

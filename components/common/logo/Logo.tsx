@@ -2,7 +2,7 @@ import { Box, Heading } from '@chakra-ui/react';
 
 const Logo = () => {
   return (
-    <Heading>
+    <Heading lineHeight={1}>
       <Box as="span" color="gray.700">
         D
       </Box>

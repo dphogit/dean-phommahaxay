@@ -1,6 +1,7 @@
 export enum PageRoutes {
   HOME = '/',
   RESUME = '/resume.pdf',
+  BLOG = '/blog',
 }
 
 export enum SectionIds {
