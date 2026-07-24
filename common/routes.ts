@@ -41,7 +41,7 @@ export enum ExternalRoutes {
   GITHUB_REPOSITORY = 'https://github.com/dphogit/dean-phommahaxay',
   HASEL = 'https://hasel.auckland.ac.nz/',
   JEST = 'https://jestjs.io/',
-  MARATHON = 'https://results.runningevents.co.nz/result/waterfront/2026/4428',
+  MARATHON = 'https://www.multisportaustralia.com.au/races/gold-coast-marathon-2026/events/1/results/individuals/8878/',
   MATERIAL_UI = 'https://material-ui.com/',
   MIXPANEL = 'https://mixpanel.com/',
   NEXT = 'https://nextjs.org/',
