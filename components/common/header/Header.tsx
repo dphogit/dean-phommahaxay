@@ -24,7 +24,7 @@ const Header = () => {
           alignItems="center"
           px={['24px', null, null, '16px']}
         >
-          <Flex columnGap="32px" alignItems="center">
+          <Flex columnGap={['16px', '32px']} alignItems="center">
             <Link
               as={NextLink}
               href={PageRoutes.HOME}
