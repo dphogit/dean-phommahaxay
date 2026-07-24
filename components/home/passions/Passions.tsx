@@ -47,7 +47,7 @@ const Passions = () => {
         <PassionOutlinedCard
           mainHeading="Love all things football."
           smallHeading="Sport"
-          supportingText="Played for a club for the majority of my life. Now parked for my running hobby."
+          supportingText="Played club footy for 15+ years. Still enjoy watching the beautiful game."
           href={ExternalRoutes.FOOTBALL_MANAGER}
           IconComponent={<FootballIcon />}
           isExternal
