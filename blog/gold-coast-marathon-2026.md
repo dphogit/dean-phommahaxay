@@ -102,17 +102,16 @@ this just burned through my glycogen stores - I should have steadily spread
 out this minute recovery over a longer period and later in the race.
 
 **3. Fitness and training mileage was just a bit short for 3:30.** While I
-completed 3 30k+ long runs during my block, my mileage for majority of the
-marathon specific section of the block (weeks 15 onwards) was in the 60k
-region, peaking between 65-70km. I think I could have reaped more fitness
+completed 3 30k+ long runs during my block, my weekly mileage for majority of
+the marathon specific section of the block (weeks 15 onwards) was in the 60k
+region, peaking between 65-70km a week. I think I could've reaped more fitness
 benefits during the week as well, rather than my long runs taking such a large
 percentage of my weekly mileage. I talk about this more in the
 [training](#training) section.
 
 I'll put these down to inexperience in the marathon and hopefully get better
 with these over more races. A bit of perspective though, 3:38 is still a great
-time that I am happy with considering it's my first proper attempt at a
-marathon time goal!
+time that I am happy with considering it's my first year committing to running!
 
 ![Midway at around 25km](/blog/gold-coast-marathon-2026/midway.jpeg)
 
@@ -157,14 +156,14 @@ know I'll be able to cut some time off.
 
 ### Build and Peak Phases
 
-Because I ran the half-marathon what I considered conservatively, I didn't need
-much time to recover and was back out easy running on the Tuesday.
+Because I ran the half-marathon what I considered conservatively, I only needed
+a day off to recover and was back out easy running on the Tuesday.
 
 I was still a bit worried 4 runs wouldn't do for the marathon, so bumped up
 training to 5 runs a week:
 
 - Weeks were structured with 1 quality session, 1 long run and 3 easy runs. The
-  reduction in quality work was to accommodate for extra mileage and distances.
+  reduction in faster work was to accommodate for extra mileage and distances.
 - Mileage peaked between 65-70km 3/4 weeks out from the block
 - Practiced taking on nutrition (gels and salt tablets) on all my long runs.
 - Followed a typical 3 week taper
@@ -185,20 +184,21 @@ I was pretty proud of myself of accomplishing these distances in my
 first training block, but I think there are some improvements to get that 3:30:
 
 - Continuing to run 5 times a week, but incorporate two consistent quality
-  sections within the week e.g. 1 workout during the week, and 1 long run with
+  sections within the week e.g. 1 workout during the week and 1 long run with
   paced sections, or 2 workouts during the week.
 
-- More consistent mileage throughout the week, I think 65-70km peak was okay for
-  a first block. However considering 40-50% of that was from the gigantic 30km+
-  long run, there is room for improvement during the week. This could be simply
-  increasing my easy runs from 40-55 mins (7-10km) to 60-75 minutes (10-12km).
+- More consistent mileage throughout the week, I think a 65-70km peak week was
+  good for a first block. However considering 40-50% of these peak weeks were
+  made of the gigantic 30km+ long run, there is room for improvement during
+  the week. This could be simply increasing my easy runs from 40-55 mins (7-10km)
+  to 60-75 minutes (10-12km).
 
 - Practice being more aggressive with my fuelling during my long run marathon
   efforts. In practice long runs, I only fuelled every 7/8k (compared to the
   6k cadence I planned for race day) so I was naturally delaying taking on fuel
   in the second half of the race as my body wouldn't be able to get it down.
-  I would also sometimes stop at the fountain midway through race efforts to
-  take on this fuel. These few minute or two breaks may have unintentionally
+  I would also sometimes stop at the fountain midway through long-run efforts to
+  take on this fuel. These minute or two breaks may have unintentionally
   given me unrealistic recovery time I wouldn't get during the race.
 
 - Strength work. This dropped off from twice a week to none as I entered the
